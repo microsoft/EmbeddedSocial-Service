@@ -1,0 +1,4 @@
+[submodule "code/Client/Windows"]
+	path = code/Client/Windows
+	url = https://github.com/microsoft/EmbeddedSocial-CSharp-API-Library.git
+	branch = sharad/v0.8

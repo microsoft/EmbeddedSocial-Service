@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A0EE827-71B9-4B6B-ACA9-9722A6AAC42D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SocialPlus.Tools.ManageCVS</RootNamespace>
+    <AssemblyName>ManageCVS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ManageCVS.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ManageCVS.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Server\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly, Version=4.3.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Server\packages\Polly-Signed.4.3.0\lib\net45\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Server\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Server\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Logging\SocialPlus.Logging.csproj">
+      <Project>{11d58b46-bdec-407e-be4b-616cb42540e7}</Project>
+      <Name>SocialPlus.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Models\SocialPlus.Models.csproj">
+      <Project>{47AE9A8A-BE57-4AA8-8517-677B4B7D13FA}</Project>
+      <Name>SocialPlus.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Server\Common\SocialPlus.Server.Common.csproj">
+      <Project>{e5a464a7-7cbb-4d5a-82de-8e16ce4c5aa6}</Project>
+      <Name>SocialPlus.Server.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Server\CVS\SocialPlus.Server.CVS.csproj">
+      <Project>{d63c1228-d6ab-428e-b307-8e6bdb3922e2}</Project>
+      <Name>SocialPlus.Server.CVS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Server\KVLibrary\SocialPlus.Server.KVLibrary.csproj">
+      <Project>{62b50f92-aaab-4cb9-98fe-6cd65e426e69}</Project>
+      <Name>SocialPlus.Server.KVLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UtilsInternal\SocialPlus.UtilsInternal.csproj">
+      <Project>{271F2EB0-57FC-42BD-8503-9379EEBE5430}</Project>
+      <Name>SocialPlus.UtilsInternal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utils\SocialPlus.Utils.csproj">
+      <Project>{0c058285-65c4-416c-9c1b-db00e2aa222a}</Project>
+      <Name>SocialPlus.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
+    <Analyzer Include="..\..\..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\..\..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

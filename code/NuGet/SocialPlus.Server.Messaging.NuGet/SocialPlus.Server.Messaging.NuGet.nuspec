@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata minClientVersion="0.1">
+    <id>SocialPlus.Server.Messaging</id>
+    <version>0.1.1.1-alpha</version>
+    <title>Library for the Azure Queue needs of MSR Embedded Social</title>
+    <authors>Microsoft Research Embedded Social Software Development Kit Team</authors>
+    <owners>Microsoft Research Embedded Social Software Development Kit Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for the Azure Queue needs of MSR Embedded Social</description>
+    <releaseNotes>None.</releaseNotes>
+    <copyright>Copyright (c) 2017</copyright>
+    <dependencies>
+      <dependency id="Microsoft.WindowsAzure.ConfigurationManager" version="3.2.1" />
+      <dependency id="WindowsAzure.ServiceBus" version="3.1.7" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\Server\Messaging\bin\Debug\SocialPlus.Server.Messaging.dll" target="lib\net452\SocialPlus.Server.Messaging.dll" />
+    <file src="..\..\Server\Messaging\bin\Debug\SocialPlus.Server.Messaging.xml" target="lib\net452\SocialPlus.Server.Messaging.xml" />
+  </files>
+</package>

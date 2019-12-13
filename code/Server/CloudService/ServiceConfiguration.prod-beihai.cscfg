@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="SocialPlus.Server.WorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="D3895B71365CB56E8B02DAF01B74FF72DAFE52CD" />
+      <Setting name="AVERTKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AVERTKey/037f0d3be56d4031906497fb46ff7aca" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/2be6285570e5476da9850ce627886bd4" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureSqlConnectionString/37088d06656a406693a1064670956d7b" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureStorageConnectionString/65f41ba4657243e6b4bb5aef3741509d" />
+      <Setting name="CDNUrl" value="https://sp-prod-beihai.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/CVSKey/9d8bc7085d614f39884ef136deaa3550" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/api/" />
+      <Setting name="CVSX509Thumbprint" value="3340b4169b0e545d9e70cdb6b20bb491c9f17204" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-prod-beihai.vault.azure.net:443/secrets/HashingKey/9012f553938442b1a5624b8446aac068" />
+      <Setting name="KeyVaultUri" value="https://sp-prod-beihai.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spprodbeihaiblob;AccountKey=$(spprodbeihaiblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/PersistentRedisConnectionString/0ea8bd45bf9b45ba9d485d3123fa8989" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/PushNotificationsConnectionString/b6a7c94f21794bfa84fcb59e094eabb7" />
+      <Setting name="RateLimitPerMinute" value="6000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/SearchServiceAdminKey/ad49182369314703b6ac7d0665879c7d" />
+      <Setting name="SearchServiceName" value="sp-prod-beihai" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/SendGridInstrumentationKey/6034af29fe854bc89462266fdabc3726" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/ServiceBusConnectionString/8a560a278bc34fdcb6c99452bb651d89" />
+      <Setting name="SigningKey" value="https://sp-prod-beihai.vault.azure.net:443/keys/SigningKey/cd8d9ec2e51748f3b1bbde5530a32dc4" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/VolatileRedisConnectionString/ce9a60dff6e648448fa05dba027c811a" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="D3895B71365CB56E8B02DAF01B74FF72DAFE52CD" />
+      <Setting name="AVERTKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AVERTKey/037f0d3be56d4031906497fb46ff7aca" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/2be6285570e5476da9850ce627886bd4" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureSqlConnectionString/37088d06656a406693a1064670956d7b" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureStorageConnectionString/65f41ba4657243e6b4bb5aef3741509d" />
+      <Setting name="CDNUrl" value="https://sp-prod-beihai.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/CVSKey/9d8bc7085d614f39884ef136deaa3550" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/api/" />
+      <Setting name="CVSX509Thumbprint" value="3340b4169b0e545d9e70cdb6b20bb491c9f17204" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-prod-beihai.vault.azure.net:443/secrets/HashingKey/9012f553938442b1a5624b8446aac068" />
+      <Setting name="KeyVaultUri" value="https://sp-prod-beihai.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spprodbeihaiblob;AccountKey=$(spprodbeihaiblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/PersistentRedisConnectionString/0ea8bd45bf9b45ba9d485d3123fa8989" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/PushNotificationsConnectionString/b6a7c94f21794bfa84fcb59e094eabb7" />
+      <Setting name="RateLimitPerMinute" value="6000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/SearchServiceAdminKey/ad49182369314703b6ac7d0665879c7d" />
+      <Setting name="SearchServiceName" value="sp-prod-beihai" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/SendGridInstrumentationKey/6034af29fe854bc89462266fdabc3726" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/ServiceBusConnectionString/8a560a278bc34fdcb6c99452bb651d89" />
+      <Setting name="SigningKey" value="https://sp-prod-beihai.vault.azure.net:443/keys/SigningKey/cd8d9ec2e51748f3b1bbde5530a32dc4" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/VolatileRedisConnectionString/ce9a60dff6e648448fa05dba027c811a" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRoleMicrosoftInternal">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="dd0428ce-c743-4d35-bb81-ed847cb5e2a5" />
+      <Setting name="AVERTCertThumbprint" value="D3895B71365CB56E8B02DAF01B74FF72DAFE52CD" />
+      <Setting name="AVERTKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AVERTKey/037f0d3be56d4031906497fb46ff7aca" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/2be6285570e5476da9850ce627886bd4" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureSqlConnectionString/37088d06656a406693a1064670956d7b" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/AzureStorageConnectionString/65f41ba4657243e6b4bb5aef3741509d" />
+      <Setting name="CDNUrl" value="https://sp-prod-beihai.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/CVSKey/9d8bc7085d614f39884ef136deaa3550" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/api/" />
+      <Setting name="CVSX509Thumbprint" value="3340b4169b0e545d9e70cdb6b20bb491c9f17204" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-prod-beihai.vault.azure.net:443/secrets/HashingKey/9012f553938442b1a5624b8446aac068" />
+      <Setting name="KeyVaultUri" value="https://sp-prod-beihai.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spprodbeihaiblob;AccountKey=$(spprodbeihaiblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/PersistentRedisConnectionString/0ea8bd45bf9b45ba9d485d3123fa8989" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/PushNotificationsConnectionString/b6a7c94f21794bfa84fcb59e094eabb7" />
+      <Setting name="RateLimitPerMinute" value="6000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/SearchServiceAdminKey/ad49182369314703b6ac7d0665879c7d" />
+      <Setting name="SearchServiceName" value="sp-prod-beihai" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/SendGridInstrumentationKey/6034af29fe854bc89462266fdabc3726" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/ServiceBusConnectionString/8a560a278bc34fdcb6c99452bb651d89" />
+      <Setting name="SigningKey" value="https://sp-prod-beihai.vault.azure.net:443/keys/SigningKey/cd8d9ec2e51748f3b1bbde5530a32dc4" />
+      <Setting name="SocialPlusCertThumbprint" value="A09BF6B9314321AB611A65779B46801CE1B9DD4F" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-prod-beihai.vault.azure.net:443/secrets/VolatileRedisConnectionString/ce9a60dff6e648448fa05dba027c811a" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

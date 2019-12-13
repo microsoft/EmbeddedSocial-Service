@@ -1,0 +1,65 @@
+{
+  "name": "RenameFollowingTable",
+  "properties": {
+    "description": "Rename Following Table to UserFollowing Table",
+    "activities": [
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity1",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "FollowingInputTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "UsersFollowingOutputTable"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.CopyTable",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip"
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity2",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "UsersFollowingOutputTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "UsersFollowingOutputTable-1"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.DeleteTables",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "tablesToDelete": "Following"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      }
+    ],
+    "isPaused": false,
+    "pipelineMode": "OneTime"
+  }
+}

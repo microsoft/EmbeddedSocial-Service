@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata minClientVersion="3.3">
+    <id>SocialPlus.Server.Email</id>
+    <version>0.7.1.3-alpha</version>
+    <title>Library for the e-mailing needs of MSR Embedded Social</title>
+    <authors>Microsoft Research Embedded Social Software Development Kit Team</authors>
+    <owners>Microsoft Research Embedded Social Software Development Kit Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for the e-mailing needs of MSR Embedded Social</description>
+    <releaseNotes>None.</releaseNotes>
+    <copyright>Copyright (c) 2017</copyright>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.3" />
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
+      <dependency id="Sendgrid" version="9.4.1" />
+      <dependency id="SocialPlus.Logging" version="0.1.0.3-alpha" />
+      <dependency id="SocialPlus.Utils" version="0.8.0.1-alpha" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\Server\Email\bin\Debug\SocialPlus.Server.Email.dll" target="lib\net452\SocialPlus.Server.Email.dll" />
+    <file src="..\..\Server\Email\bin\Debug\SocialPlus.Server.Email.xml" target="lib\net452\SocialPlus.Server.Email.xml" />
+  </files>
+</package>
+<!--
+  You can build the NuGet package using this command:
+    nuget pack SocialPlus.Server.Email.NuGet.nuspec -Verbosity detailed
+  You can publish the NuGet package using this command:
+    nuget push SocialPlus.Server.Email.0.1.4-alpha.nupkg -Source https://social-plus.pkgs.visualstudio.com/_packaging/SocialPlus/nuget/v3/index.json -ApiKey SocialPlus.Server.Email
+-->

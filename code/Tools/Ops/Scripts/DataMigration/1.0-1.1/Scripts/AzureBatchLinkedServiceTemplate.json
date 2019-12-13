@@ -1,0 +1,14 @@
+{
+  "name": "AzureBatchLinkedService",
+  "properties": {
+    "type": "AzureBatch",
+    "description": "",
+    "typeProperties": {
+      "accountName": "<Azure Batch account name>",
+      "accessKey": "<Azure Batch account key>",
+      "poolName": "<Azure Batch pool name>",
+      "batchUri": "<Azure Batch uri>",
+      "linkedServiceName": "<Specify associated storage linked service reference here>"
+    }
+  }
+}

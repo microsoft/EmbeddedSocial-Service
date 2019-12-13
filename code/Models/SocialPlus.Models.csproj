@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47AE9A8A-BE57-4AA8-8517-677B4B7D13FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SocialPlus.Models</RootNamespace>
+    <AssemblyName>SocialPlus.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SocialPlus.Models.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\SocialPlus.Models.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\ActivityType.cs" />
+    <Compile Include="Enums\AppStatus.cs" />
+    <Compile Include="Enums\BlobType.cs" />
+    <Compile Include="Enums\ContentType.cs" />
+    <Compile Include="Enums\IdentityProviderType.cs" />
+    <Compile Include="Enums\ImageType.cs" />
+    <Compile Include="Enums\ModerationStatus.cs" />
+    <Compile Include="Enums\PlatformType.cs" />
+    <Compile Include="Enums\PublisherType.cs" />
+    <Compile Include="Enums\TopicRelationshipStatus.cs" />
+    <Compile Include="Enums\UserRelationshipStatus.cs" />
+    <Compile Include="Enums\ReportReason.cs" />
+    <Compile Include="Enums\ReportType.cs" />
+    <Compile Include="Enums\TimeRange.cs" />
+    <Compile Include="Enums\ReviewStatus.cs" />
+    <Compile Include="Enums\UserVisibilityStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\DeleteTopicNameRequest.cs" />
+    <Compile Include="Requests\PostBlockedUserRequest.cs" />
+    <Compile Include="Requests\PostCommentRequest.cs" />
+    <Compile Include="Requests\PostFollowerRequest.cs" />
+    <Compile Include="Requests\PostFollowingTopicRequest.cs" />
+    <Compile Include="Requests\PostFollowingUserRequest.cs" />
+    <Compile Include="Requests\PostLinkedAccountRequest.cs" />
+    <Compile Include="Requests\PostPinRequest.cs" />
+    <Compile Include="Requests\PostReplyRequest.cs" />
+    <Compile Include="Requests\PostReportRequest.cs" />
+    <Compile Include="Requests\PostSessionRequest.cs" />
+    <Compile Include="Requests\PostTopicRequest.cs" />
+    <Compile Include="Requests\PostTopicNameRequest.cs" />
+    <Compile Include="Requests\PostUserRequest.cs" />
+    <Compile Include="Requests\PutNotificationsStatusRequest.cs" />
+    <Compile Include="Requests\PutPushRegistrationRequest.cs" />
+    <Compile Include="Requests\PutTopicRequest.cs" />
+    <Compile Include="Requests\PutTopicNameRequest.cs" />
+    <Compile Include="Requests\PutUserInfoRequest.cs" />
+    <Compile Include="Requests\PutUserPhotoRequest.cs" />
+    <Compile Include="Requests\PutUserVisibilityRequest.cs" />
+    <Compile Include="Responses\BuildsCurrentResponse.cs" />
+    <Compile Include="Responses\CountResponse.cs" />
+    <Compile Include="Responses\FeedResponse.cs" />
+    <Compile Include="Responses\GetBuildInfoResponse.cs" />
+    <Compile Include="Responses\GetClientConfigResponse.cs" />
+    <Compile Include="Responses\GetRequestTokenResponse.cs" />
+    <Compile Include="Responses\GetServiceInfoResponse.cs" />
+    <Compile Include="Responses\GetTopicByNameResponse.cs" />
+    <Compile Include="Responses\GetTopicNameResponseV06.cs" />
+    <Compile Include="Responses\PostBlobResponse.cs" />
+    <Compile Include="Responses\PostCommentResponse.cs" />
+    <Compile Include="Responses\PostImageResponse.cs" />
+    <Compile Include="Responses\PostReplyResponse.cs" />
+    <Compile Include="Responses\PostSessionResponse.cs" />
+    <Compile Include="Responses\PostTopicResponse.cs" />
+    <Compile Include="Responses\PostUserResponse.cs" />
+    <Compile Include="Views\ActivityView.cs" />
+    <Compile Include="Views\AppCompactView.cs" />
+    <Compile Include="Views\CommentView.cs" />
+    <Compile Include="Views\ContentCompactView.cs" />
+    <Compile Include="Views\LinkedAccountView.cs" />
+    <Compile Include="Views\ReplyView.cs" />
+    <Compile Include="Views\TopicView.cs" />
+    <Compile Include="Views\UserCompactView.cs" />
+    <Compile Include="Views\UserProfileView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
+    <Analyzer Include="..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

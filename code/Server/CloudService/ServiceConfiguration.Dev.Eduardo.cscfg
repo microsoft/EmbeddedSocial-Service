@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="SocialPlus.Server.WorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AVERTKey/4cf7a456efaf45e498a0293a8f1343a8" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/42e95dc2f25443e8a13909e3e7b03149" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureSqlConnectionString/5e343d7598354ca08dc2ba412d93931e" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureStorageConnectionString/cef0769898804bb7a7a1e328b51283e2" />
+      <Setting name="CDNUrl" value="https://sp-dev-eduardo.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/CVSKey/7a4e65a8c54a428c9352c550e8974b4c" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-dev-eduardo.vault.azure.net:443/secrets/HashingKey/78bbffdc5bdf48a2878b14232c05e891" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-eduardo.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdeveduardoblob;AccountKey=$(_spdeveduardoblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/PersistentRedisConnectionString/240f383f169d491bbaaf2261074dd9ad" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/PushNotificationsConnectionString/1db283ef04c946be865ef3bbc8d723d5" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/SearchServiceAdminKey/98ec084440d3440cb0e03ccb7a90db35" />
+      <Setting name="SearchServiceName" value="sp-dev-eduardo" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/SendGridInstrumentationKey/cf21ed2d464a4ef89edb53df3a05b706" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/ServiceBusConnectionString/b75598d54428427caa93ac2e13fcced3" />
+      <Setting name="SigningKey" value="https://sp-dev-eduardo.vault.azure.net:443/keys/SigningKey/114c7d6f3018482691b29357bfec0313" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/VolatileRedisConnectionString/b67012955d564f6db71f45ac74d363b8" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AVERTKey/4cf7a456efaf45e498a0293a8f1343a8" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/42e95dc2f25443e8a13909e3e7b03149" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureSqlConnectionString/5e343d7598354ca08dc2ba412d93931e" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureStorageConnectionString/cef0769898804bb7a7a1e328b51283e2" />
+      <Setting name="CDNUrl" value="https://sp-dev-eduardo.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/CVSKey/7a4e65a8c54a428c9352c550e8974b4c" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-dev-eduardo.vault.azure.net:443/secrets/HashingKey/78bbffdc5bdf48a2878b14232c05e891" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-eduardo.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdeveduardoblob;AccountKey=$(_spdeveduardoblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/PersistentRedisConnectionString/240f383f169d491bbaaf2261074dd9ad" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/PushNotificationsConnectionString/1db283ef04c946be865ef3bbc8d723d5" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/SearchServiceAdminKey/98ec084440d3440cb0e03ccb7a90db35" />
+      <Setting name="SearchServiceName" value="sp-dev-eduardo" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/SendGridInstrumentationKey/cf21ed2d464a4ef89edb53df3a05b706" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/ServiceBusConnectionString/b75598d54428427caa93ac2e13fcced3" />
+      <Setting name="SigningKey" value="https://sp-dev-eduardo.vault.azure.net:443/keys/SigningKey/114c7d6f3018482691b29357bfec0313" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/VolatileRedisConnectionString/b67012955d564f6db71f45ac74d363b8" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRoleMicrosoftInternal">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AVERTKey/4cf7a456efaf45e498a0293a8f1343a8" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/42e95dc2f25443e8a13909e3e7b03149" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureSqlConnectionString/5e343d7598354ca08dc2ba412d93931e" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/AzureStorageConnectionString/cef0769898804bb7a7a1e328b51283e2" />
+      <Setting name="CDNUrl" value="https://sp-dev-eduardo.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/CVSKey/7a4e65a8c54a428c9352c550e8974b4c" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-dev-eduardo.vault.azure.net:443/secrets/HashingKey/78bbffdc5bdf48a2878b14232c05e891" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-eduardo.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdeveduardoblob;AccountKey=$(_spdeveduardoblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/PersistentRedisConnectionString/240f383f169d491bbaaf2261074dd9ad" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/PushNotificationsConnectionString/1db283ef04c946be865ef3bbc8d723d5" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/SearchServiceAdminKey/98ec084440d3440cb0e03ccb7a90db35" />
+      <Setting name="SearchServiceName" value="sp-dev-eduardo" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/SendGridInstrumentationKey/cf21ed2d464a4ef89edb53df3a05b706" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/ServiceBusConnectionString/b75598d54428427caa93ac2e13fcced3" />
+      <Setting name="SigningKey" value="https://sp-dev-eduardo.vault.azure.net:443/keys/SigningKey/114c7d6f3018482691b29357bfec0313" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-eduardo.vault.azure.net:443/secrets/VolatileRedisConnectionString/b67012955d564f6db71f45ac74d363b8" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5A464A7-7CBB-4D5A-82DE-8E16CE4C5AA6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SocialPlus.Server</RootNamespace>
+    <AssemblyName>SocialPlus.Server.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>d36ea13e</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SocialPlus.Server.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\SocialPlus.Server.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.7.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.7.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.7.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocol.Extensions, Version=1.0.2.33, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocol.Extensions.1.0.2.206221351\lib\net45\Microsoft.IdentityModel.Protocol.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.1\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.0.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.2.206221351\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzureSettingsReader.cs" />
+    <Compile Include="Blobs\AzureCDNInstanceType.cs" />
+    <Compile Include="Blobs\AzureStorageConfiguration.cs" />
+    <Compile Include="Blobs\AzureStorageInstanceType.cs" />
+    <Compile Include="Blobs\BlobItem.cs" />
+    <Compile Include="Blobs\BlobsStore.cs" />
+    <Compile Include="Blobs\CBStoreManager.cs" />
+    <Compile Include="Blobs\ContainerDescriptor.cs" />
+    <Compile Include="Blobs\ContainerDescriptorProvider.cs" />
+    <Compile Include="Blobs\ContainerIdentifier.cs" />
+    <Compile Include="Blobs\IBlobItem.cs" />
+    <Compile Include="Blobs\IBlobsStore.cs" />
+    <Compile Include="Blobs\ICBStoreManager.cs" />
+    <Compile Include="ConnectionStringProvider.cs" />
+    <Compile Include="Entities\ActivityFeedEntity.cs" />
+    <Compile Include="Entities\ActivityLookupEntity.cs" />
+    <Compile Include="Entities\AppAdminEntity.cs" />
+    <Compile Include="Entities\AppFeedEntity.cs" />
+    <Compile Include="Entities\AppKeyFeedEntity.cs" />
+    <Compile Include="Entities\AppLookupEntity.cs" />
+    <Compile Include="Entities\AppProfileEntity.cs" />
+    <Compile Include="Entities\AVERTTransactionEntity.cs" />
+    <Compile Include="Entities\BlobMetadataEntity.cs" />
+    <Compile Include="Entities\ClientConfigEntity.cs" />
+    <Compile Include="Entities\ClientNamesFeedEntity.cs" />
+    <Compile Include="Entities\CommentEntity.cs" />
+    <Compile Include="Entities\CommentFeedEntity.cs" />
+    <Compile Include="Entities\ContentReportEntity.cs" />
+    <Compile Include="Entities\ContentReportFeedEntity.cs" />
+    <Compile Include="Entities\CVSTransactionEntity.cs" />
+    <Compile Include="Entities\IActivityFeedEntity.cs" />
+    <Compile Include="Entities\IActivityLookupEntity.cs" />
+    <Compile Include="Entities\IAppAdminEntity.cs" />
+    <Compile Include="Entities\IAppFeedEntity.cs" />
+    <Compile Include="Entities\IAppKeyFeedEntity.cs" />
+    <Compile Include="Entities\IAppLookupEntity.cs" />
+    <Compile Include="Entities\IAppProfileEntity.cs" />
+    <Compile Include="Entities\IAVERTTransactionEntity.cs" />
+    <Compile Include="Entities\IBlobMetadataEntity.cs" />
+    <Compile Include="Entities\IClientConfigEntity.cs" />
+    <Compile Include="Entities\IClientNamesFeedEntity.cs" />
+    <Compile Include="Entities\ICommentEntity.cs" />
+    <Compile Include="Entities\ICommentFeedEntity.cs" />
+    <Compile Include="Entities\IContentReportEntity.cs" />
+    <Compile Include="Entities\IContentReportFeedEntity.cs" />
+    <Compile Include="Entities\ICVSTransactionEntity.cs" />
+    <Compile Include="Entities\IdentityProviderCredentialsEntity.cs" />
+    <Compile Include="Entities\IIdentityProviderCredentialsEntity.cs" />
+    <Compile Include="Entities\IImageMetadataEntity.cs" />
+    <Compile Include="Entities\ILikeFeedEntity.cs" />
+    <Compile Include="Entities\ILikeLookupEntity.cs" />
+    <Compile Include="Entities\ILinkedAccountFeedEntity.cs" />
+    <Compile Include="Entities\ImageMetadataEntity.cs" />
+    <Compile Include="Entities\IModerationEntity.cs" />
+    <Compile Include="Entities\INotificationsStatusEntity.cs" />
+    <Compile Include="Entities\IPinFeedEntity.cs" />
+    <Compile Include="Entities\IPinLookupEntity.cs" />
+    <Compile Include="Entities\IPushNotificationsConfigurationEntity.cs" />
+    <Compile Include="Entities\IPushRegistrationFeedEntity.cs" />
+    <Compile Include="Entities\IReplyEntity.cs" />
+    <Compile Include="Entities\IReplyFeedEntity.cs" />
+    <Compile Include="Entities\IStoreVersionEntity.cs" />
+    <Compile Include="Entities\ITopicEntity.cs" />
+    <Compile Include="Entities\ITopicFeedEntity.cs" />
+    <Compile Include="Entities\ITopicNameEntity.cs" />
+    <Compile Include="Entities\ITopicRelationshipFeedEntity.cs" />
+    <Compile Include="Entities\ITopicRelationshipLookupEntity.cs" />
+    <Compile Include="Entities\IUserFeedEntity.cs" />
+    <Compile Include="Entities\IUserLookupEntity.cs" />
+    <Compile Include="Entities\IUserProfileEntity.cs" />
+    <Compile Include="Entities\IUserRelationshipFeedEntity.cs" />
+    <Compile Include="Entities\IUserRelationshipLookupEntity.cs" />
+    <Compile Include="Entities\IUserReportEntity.cs" />
+    <Compile Include="Entities\IUserReportFeedEntity.cs" />
+    <Compile Include="Entities\IValidationConfigurationEntity.cs" />
+    <Compile Include="Entities\LikeFeedEntity.cs" />
+    <Compile Include="Entities\LikeLookupEntity.cs" />
+    <Compile Include="Entities\LinkedAccountFeedEntity.cs" />
+    <Compile Include="Entities\ModerationEntity.cs" />
+    <Compile Include="Entities\NotificationsStatusEntity.cs" />
+    <Compile Include="Entities\PinFeedEntity.cs" />
+    <Compile Include="Entities\PinLookupEntity.cs" />
+    <Compile Include="Entities\PushNotificationsConfigurationEntity.cs" />
+    <Compile Include="Entities\PushRegistrationFeedEntity.cs" />
+    <Compile Include="Entities\ReplyEntity.cs" />
+    <Compile Include="Entities\ReplyFeedEntity.cs" />
+    <Compile Include="Entities\StoreVersionEntity.cs" />
+    <Compile Include="Entities\TopicEntity.cs" />
+    <Compile Include="Entities\TopicFeedEntity.cs" />
+    <Compile Include="Entities\TopicNameEntity.cs" />
+    <Compile Include="Entities\TopicRankFeedEntity.cs" />
+    <Compile Include="Entities\TopicRelationshipFeedEntity.cs" />
+    <Compile Include="Entities\TopicRelationshipLookupEntity.cs" />
+    <Compile Include="Entities\TopicSearchFeedEntity.cs" />
+    <Compile Include="Entities\UserFeedEntity.cs" />
+    <Compile Include="Entities\UserLookupEntity.cs" />
+    <Compile Include="Entities\UserProfileEntity.cs" />
+    <Compile Include="Entities\UserRankFeedEntity.cs" />
+    <Compile Include="Entities\UserRelationshipFeedEntity.cs" />
+    <Compile Include="Entities\UserRelationshipLookupEntity.cs" />
+    <Compile Include="Entities\UserReportEntity.cs" />
+    <Compile Include="Entities\UserReportFeedEntity.cs" />
+    <Compile Include="Entities\UserSearchFeedEntity.cs" />
+    <Compile Include="Entities\ValidationConfigurationEntity.cs" />
+    <Compile Include="Exceptions\ExpiredTokenException.cs" />
+    <Compile Include="Exceptions\IdentityProviderException.cs" />
+    <Compile Include="Exceptions\InvalidIdentityException.cs" />
+    <Compile Include="Exceptions\InvalidTokenException.cs" />
+    <Compile Include="IConnectionStringProvider.cs" />
+    <Compile Include="Managers\ActivitiesManager.cs" />
+    <Compile Include="Managers\AppsManager.cs" />
+    <Compile Include="Managers\Auth\AADAuthManager.cs" />
+    <Compile Include="Managers\Auth\AnonAuthManager.cs" />
+    <Compile Include="Managers\Auth\CommonAuthManager.cs" />
+    <Compile Include="Managers\Auth\CompositeAuthManager.cs" />
+    <Compile Include="Managers\Auth\IAuthManager.cs" />
+    <Compile Include="Managers\Auth\ICompositeAuthManager.cs" />
+    <Compile Include="Managers\Auth\OAuthManager.cs" />
+    <Compile Include="Managers\Auth\SocialPlusAuthManager.cs" />
+    <Compile Include="Managers\BlobsManager.cs" />
+    <Compile Include="Managers\CommentsManager.cs" />
+    <Compile Include="Managers\CTStoreManager.cs" />
+    <Compile Include="Managers\CVSModerationManager.cs" />
+    <Compile Include="Managers\FakeIdentitiesManager.cs" />
+    <Compile Include="Managers\IActivitiesManager.cs" />
+    <Compile Include="Managers\IAppsManager.cs" />
+    <Compile Include="Managers\IBlobsManager.cs" />
+    <Compile Include="Managers\ICTStoreManager.cs" />
+    <Compile Include="Managers\ICommentsManager.cs" />
+    <Compile Include="Managers\IdentitiesManager.cs" />
+    <Compile Include="Managers\IdentityProviderUser.cs" />
+    <Compile Include="Managers\IIdentitiesManager.cs" />
+    <Compile Include="Managers\ILikesManager.cs" />
+    <Compile Include="Managers\ImageSize.cs" />
+    <Compile Include="Managers\ImageSizesConfiguration.cs" />
+    <Compile Include="Managers\IModerationManager.cs" />
+    <Compile Include="Managers\INotificationsManager.cs" />
+    <Compile Include="Managers\IPinsManager.cs" />
+    <Compile Include="Managers\IPopularTopicsManager.cs" />
+    <Compile Include="Managers\IPopularUsersManager.cs" />
+    <Compile Include="Managers\IPushNotificationsManager.cs" />
+    <Compile Include="Managers\IRelationshipsManager.cs" />
+    <Compile Include="Managers\IRepliesManager.cs" />
+    <Compile Include="Managers\IReportsManager.cs" />
+    <Compile Include="Managers\ISearchManager.cs" />
+    <Compile Include="Managers\ISessionTokenManager.cs" />
+    <Compile Include="Managers\ITopicNamesManager.cs" />
+    <Compile Include="Managers\ITopicsManager.cs" />
+    <Compile Include="Managers\IUsersManager.cs" />
+    <Compile Include="Managers\IViewsManager.cs" />
+    <Compile Include="Managers\LikesManager.cs" />
+    <Compile Include="Managers\NotificationsManager.cs" />
+    <Compile Include="Managers\PinsManager.cs" />
+    <Compile Include="Managers\PopularTopicsManager.cs" />
+    <Compile Include="Managers\PopularUsersManager.cs" />
+    <Compile Include="Managers\ProcessType.cs" />
+    <Compile Include="Managers\PushNotificationsManager.cs" />
+    <Compile Include="Managers\RelationshipOperation.cs" />
+    <Compile Include="Managers\RelationshipsManager.cs" />
+    <Compile Include="Managers\RelationshipType.cs" />
+    <Compile Include="Managers\RepliesManager.cs" />
+    <Compile Include="Managers\ReportsManager.cs" />
+    <Compile Include="Managers\SearchManager.cs" />
+    <Compile Include="Managers\SessionTokenManager.cs" />
+    <Compile Include="Managers\TopicNamesManager.cs" />
+    <Compile Include="Managers\TopicsManager.cs" />
+    <Compile Include="Managers\UsersManager.cs" />
+    <Compile Include="Managers\ViewsManager.cs" />
+    <Compile Include="MasterApp.cs" />
+    <Compile Include="Messages\ContentModerationMessage.cs" />
+    <Compile Include="Messages\FanoutActivityMessage.cs" />
+    <Compile Include="Messages\FanoutTopicActivityMessage.cs" />
+    <Compile Include="Messages\FanoutTopicMessage.cs" />
+    <Compile Include="Messages\FollowingImportMessage.cs" />
+    <Compile Include="Messages\IContentModerationMessage.cs" />
+    <Compile Include="Messages\IFanoutActivityMessage.cs" />
+    <Compile Include="Messages\IFanoutTopicActivityMessage.cs" />
+    <Compile Include="Messages\IFanoutTopicMessage.cs" />
+    <Compile Include="Messages\IFollowingImportMessage.cs" />
+    <Compile Include="Messages\IImageModerationMessage.cs" />
+    <Compile Include="Messages\ILikeMessage.cs" />
+    <Compile Include="Messages\ImageModerationMessage.cs" />
+    <Compile Include="Messages\IMessage.cs" />
+    <Compile Include="Messages\IModerationMessage.cs" />
+    <Compile Include="Messages\IRelationshipMessage.cs" />
+    <Compile Include="Messages\IReportMessage.cs" />
+    <Compile Include="Messages\IResizeImageMessage.cs" />
+    <Compile Include="Messages\ISearchIndexTopicMessage.cs" />
+    <Compile Include="Messages\ISearchIndexUserMessage.cs" />
+    <Compile Include="Messages\ISearchRemoveTopicMessage.cs" />
+    <Compile Include="Messages\ISearchRemoveUserMessage.cs" />
+    <Compile Include="Messages\IUserModerationMessage.cs" />
+    <Compile Include="Messages\LikeMessage.cs" />
+    <Compile Include="Messages\ModerationMessage.cs" />
+    <Compile Include="Messages\RelationshipMessage.cs" />
+    <Compile Include="Messages\ReportMessage.cs" />
+    <Compile Include="Messages\ResizeImageMessage.cs" />
+    <Compile Include="Messages\SearchIndexTopicMessage.cs" />
+    <Compile Include="Messages\SearchIndexUserMessage.cs" />
+    <Compile Include="Messages\SearchRemoveTopicMessage.cs" />
+    <Compile Include="Messages\SearchRemoveUserMessage.cs" />
+    <Compile Include="Messages\UserModerationMessage.cs" />
+    <Compile Include="NullConnectionStringProvider.cs" />
+    <Compile Include="Principal\AppPrincipal.cs" />
+    <Compile Include="Principal\UserPrincipal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queues\FanoutActivitiesQueue.cs" />
+    <Compile Include="Queues\FanoutTopicsQueue.cs" />
+    <Compile Include="Queues\FollowingImportsQueue.cs" />
+    <Compile Include="Queues\IFanoutActivitiesQueue.cs" />
+    <Compile Include="Queues\IFanoutTopicsQueue.cs" />
+    <Compile Include="Queues\IFollowingImportsQueue.cs" />
+    <Compile Include="Queues\ILikesQueue.cs" />
+    <Compile Include="Queues\IModerationQueue.cs" /> 
+    <Compile Include="Queues\IQueueBase.cs" />
+    <Compile Include="Queues\IQueueManager.cs" />
+    <Compile Include="Queues\IRelationshipsQueue.cs" />
+    <Compile Include="Queues\IReportsQueue.cs" />
+    <Compile Include="Queues\IResizeImagesQueue.cs" />
+    <Compile Include="Queues\ISearchQueue.cs" />
+    <Compile Include="Queues\LikesQueue.cs" />
+    <Compile Include="Queues\ModerationQueue.cs" /> 
+    <Compile Include="Queues\QueueBase.cs" />
+    <Compile Include="Queues\QueueDescriptor.cs" />
+    <Compile Include="Queues\QueueDescriptorProvider.cs" />
+    <Compile Include="Queues\QueueIdentifier.cs" />
+    <Compile Include="Queues\QueueManager.cs" />
+    <Compile Include="Queues\RelationshipsQueue.cs" />
+    <Compile Include="Queues\ReportsQueue.cs" />
+    <Compile Include="Queues\ResizeImagesQueue.cs" />
+    <Compile Include="Queues\SearchQueue.cs" />
+    <Compile Include="Queues\ServiceBusInstanceType.cs" />
+    <Compile Include="Queues\ServiceBusQueueConfiguration.cs" />
+    <Compile Include="Tables\ActivitiesStore.cs" />
+    <Compile Include="Tables\AppsStore.cs" />
+    <Compile Include="Tables\AVERTInstanceType.cs" />
+    <Compile Include="Tables\AVERTStore.cs" />
+    <Compile Include="Tables\AzureStorageConfiguration.cs" />
+    <Compile Include="Tables\AzureStorageInstanceType.cs" />
+    <Compile Include="Tables\BlobsMetadataStore.cs" />
+    <Compile Include="Tables\CommentsStore.cs" />
+    <Compile Include="Tables\ContainerDescriptor.cs" />
+    <Compile Include="Tables\ContainerIdentifier.cs" />
+    <Compile Include="Tables\ContainerTableDescriptorProvider.cs" />
+    <Compile Include="Tables\ContentReportsStore.cs" />
+    <Compile Include="Tables\CVSInstanceType.cs" />
+    <Compile Include="Tables\CVSTransactionStore.cs" />
+    <Compile Include="Tables\Extensions.cs" />
+    <Compile Include="Tables\IActivitiesStore.cs" />
+    <Compile Include="Tables\IAppsStore.cs" />
+    <Compile Include="Tables\IAVERTStore.cs" />
+    <Compile Include="Tables\IBlobsMetadataStore.cs" />
+    <Compile Include="Tables\ICommentsStore.cs" />
+    <Compile Include="Tables\IContentReportsStore.cs" />
+    <Compile Include="Tables\ICVSTransactionStore.cs" />
+    <Compile Include="Tables\ILikesStore.cs" />
+    <Compile Include="Tables\IModerationStore.cs" />
+    <Compile Include="Tables\INotificationsStore.cs" />
+    <Compile Include="Tables\IPinsStore.cs" />
+    <Compile Include="Tables\IPushRegistrationsStore.cs" />
+    <Compile Include="Tables\IRepliesStore.cs" />
+    <Compile Include="Tables\ITopicNamesStore.cs" />
+    <Compile Include="Tables\ITopicRelationshipsStore.cs" />
+    <Compile Include="Tables\ITopicsStore.cs" />
+    <Compile Include="Tables\IUserRelationshipsStore.cs" />
+    <Compile Include="Tables\IUserReportsStore.cs" />
+    <Compile Include="Tables\IUsersStore.cs" />
+    <Compile Include="Tables\LikesStore.cs" />
+    <Compile Include="Tables\ModerationStore.cs" />
+    <Compile Include="Tables\NotificationsStore.cs" />
+    <Compile Include="Tables\PinsStore.cs" />
+    <Compile Include="Tables\PushNotificationInstanceType.cs" />
+    <Compile Include="Tables\PushRegistrationsStore.cs" />
+    <Compile Include="Tables\RedisConfiguration.cs" />
+    <Compile Include="Tables\RedisInstanceType.cs" />
+    <Compile Include="Tables\RepliesStore.cs" />
+    <Compile Include="Tables\SearchInstanceType.cs" />
+    <Compile Include="Tables\StorageConsistencyMode.cs" />
+    <Compile Include="Tables\StoreSerializers.cs" />
+    <Compile Include="Tables\TableDescriptor.cs" />
+    <Compile Include="Tables\TableIdentifier.cs" />
+    <Compile Include="Tables\TopicNamesStore.cs" />
+    <Compile Include="Tables\TopicRelationshipsStore.cs" />
+    <Compile Include="Tables\TopicsStore.cs" />
+    <Compile Include="Tables\UserRelationshipsStore.cs" />
+    <Compile Include="Tables\UserReportsStore.cs" />
+    <Compile Include="Tables\UsersStore.cs" />
+    <Compile Include="Utils\WindowsRegistry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Logging\SocialPlus.Logging.csproj">
+      <Project>{11d58b46-bdec-407e-be4b-616cb42540e7}</Project>
+      <Name>SocialPlus.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Models\SocialPlus.Models.csproj">
+      <Project>{47ae9a8a-be57-4aa8-8517-677b4b7d13fa}</Project>
+      <Name>SocialPlus.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UtilsInternal\SocialPlus.UtilsInternal.csproj">
+      <Project>{271f2eb0-57fc-42bd-8503-9379eebe5430}</Project>
+      <Name>SocialPlus.UtilsInternal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utils\SocialPlus.Utils.csproj">
+      <Project>{0c058285-65c4-416c-9c1b-db00e2aa222a}</Project>
+      <Name>SocialPlus.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AVERT\SocialPlus.Server.AVERT.csproj">
+      <Project>{21b9cfd9-0fd0-46f1-86f8-a8fad742a43d}</Project>
+      <Name>SocialPlus.Server.AVERT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBStore\SocialPlus.Server.CBStore.csproj">
+      <Project>{f6c94c84-d39a-4521-ad4c-f5d9ad3bdec7}</Project>
+      <Name>SocialPlus.Server.CBStore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CTStore\Microsoft.CTStore.csproj">
+      <Project>{1b1cde4e-fc69-40e7-a0e0-b28a4d481083}</Project>
+      <Name>Microsoft.CTStore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CVS\SocialPlus.Server.CVS.csproj">
+      <Project>{d63c1228-d6ab-428e-b307-8e6bdb3922e2}</Project>
+      <Name>SocialPlus.Server.CVS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KVLibrary\SocialPlus.Server.KVLibrary.csproj">
+      <Project>{62b50f92-aaab-4cb9-98fe-6cd65e426e69}</Project>
+      <Name>SocialPlus.Server.KVLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Messaging\SocialPlus.Server.Messaging.csproj">
+      <Project>{4c239a25-498f-4f61-9650-dfb312f90972}</Project>
+      <Name>SocialPlus.Server.Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OAuthLibrary\SocialPlus.Server.OAuthLibrary.csproj">
+      <Project>{4dfcd355-427b-43c0-8935-34b1dc842449}</Project>
+      <Name>SocialPlus.Server.OAuthLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PushNotificationsHub\SocialPlus.Server.PushNotificationsHub.csproj">
+      <Project>{0795117a-e546-4bc3-b3f9-1a3740884250}</Project>
+      <Name>SocialPlus.Server.PushNotificationsHub</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search\SocialPlus.Server.Search.csproj">
+      <Project>{9c8ba0c8-3c66-497b-bc2e-300905b399ab}</Project>
+      <Name>SocialPlus.Server.Search</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

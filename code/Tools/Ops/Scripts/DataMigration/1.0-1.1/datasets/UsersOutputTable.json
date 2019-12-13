@@ -1,0 +1,16 @@
+{
+  "name": "UsersOutputTable",
+  "properties": {
+    "published": false,
+    "type": "AzureTable",
+    "linkedServiceName": "placeholder-service-name",
+    "typeProperties": {
+      "tableName": "Users"
+    },
+    "availability": {
+      "frequency": "Minute",
+      "interval": 15,
+      "style": "StartOfInterval"
+    }
+  }
+}

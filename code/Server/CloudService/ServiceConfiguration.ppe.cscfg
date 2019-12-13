@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="SocialPlus.Server.WorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="D3895B71365CB56E8B02DAF01B74FF72DAFE52CD" />
+      <Setting name="AVERTKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AVERTKey/0c78a301ffb747d9bd33867a98d55bc3" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/1dedc907b65c4cef99ece02464e79086" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureSqlConnectionString/5c5c2a2303ff4eea92cfeac451fa8d67" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureStorageConnectionString/9908167c7ad64dc0bacab4b4438ab56e" />
+      <Setting name="CDNUrl" value="https://sp-ppe.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/CVSKey/8e705120b2014a2492626cb5e787bed9" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/api/" />
+      <Setting name="CVSX509Thumbprint" value="3340b4169b0e545d9e70cdb6b20bb491c9f17204" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="false" />
+      <Setting name="EnableMdm" value="true" />
+      <Setting name="HashingKey" value="https://sp-ppe.vault.azure.net:443/secrets/HashingKey/c512c68c18244909a6aa765efbb6b5b0" />
+      <Setting name="KeyVaultUri" value="https://sp-ppe.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spppeblob;AccountKey=$(spppeblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/PersistentRedisConnectionString/6ba29bad35a94e6b96703636e5aa863e" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/PushNotificationsConnectionString/2428944864a244d0bd69efb73750b76c" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/SearchServiceAdminKey/ca3d3bba95104f258ed9877d5ba1d7c7" />
+      <Setting name="SearchServiceName" value="sp-ppe" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/SendGridInstrumentationKey/c48aacb0d161405a837ef0989ebe7f6c" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/ServiceBusConnectionString/1d323e6eeb3e453c84e55dbc5bf71387" />
+      <Setting name="SigningKey" value="https://sp-ppe.vault.azure.net/keys/SigningKey/06585d0b49e342ffa02253ca09100da4" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/VolatileRedisConnectionString/03ae12ea203c4bc1a9ae03d358ac0cf7" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="D3895B71365CB56E8B02DAF01B74FF72DAFE52CD" />
+      <Setting name="AVERTKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AVERTKey/0c78a301ffb747d9bd33867a98d55bc3" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/1dedc907b65c4cef99ece02464e79086" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureSqlConnectionString/5c5c2a2303ff4eea92cfeac451fa8d67" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureStorageConnectionString/9908167c7ad64dc0bacab4b4438ab56e" />
+      <Setting name="CDNUrl" value="https://sp-ppe.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/CVSKey/8e705120b2014a2492626cb5e787bed9" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/api/" />
+      <Setting name="CVSX509Thumbprint" value="3340b4169b0e545d9e70cdb6b20bb491c9f17204" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="false" />
+      <Setting name="EnableMdm" value="true" />
+      <Setting name="HashingKey" value="https://sp-ppe.vault.azure.net:443/secrets/HashingKey/c512c68c18244909a6aa765efbb6b5b0" />
+      <Setting name="KeyVaultUri" value="https://sp-ppe.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spppeblob;AccountKey=$(spppeblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/PersistentRedisConnectionString/6ba29bad35a94e6b96703636e5aa863e" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/PushNotificationsConnectionString/2428944864a244d0bd69efb73750b76c" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/SearchServiceAdminKey/ca3d3bba95104f258ed9877d5ba1d7c7" />
+      <Setting name="SearchServiceName" value="sp-ppe" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/SendGridInstrumentationKey/c48aacb0d161405a837ef0989ebe7f6c" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/ServiceBusConnectionString/1d323e6eeb3e453c84e55dbc5bf71387" />
+      <Setting name="SigningKey" value="https://sp-ppe.vault.azure.net/keys/SigningKey/06585d0b49e342ffa02253ca09100da4" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/VolatileRedisConnectionString/03ae12ea203c4bc1a9ae03d358ac0cf7" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRoleMicrosoftInternal">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="dd0428ce-c743-4d35-bb81-ed847cb5e2a5" />
+      <Setting name="AVERTCertThumbprint" value="D3895B71365CB56E8B02DAF01B74FF72DAFE52CD" />
+      <Setting name="AVERTKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AVERTKey/0c78a301ffb747d9bd33867a98d55bc3" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/1dedc907b65c4cef99ece02464e79086" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureSqlConnectionString/5c5c2a2303ff4eea92cfeac451fa8d67" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/AzureStorageConnectionString/9908167c7ad64dc0bacab4b4438ab56e" />
+      <Setting name="CDNUrl" value="https://sp-ppe.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/CVSKey/8e705120b2014a2492626cb5e787bed9" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/api/" />
+      <Setting name="CVSX509Thumbprint" value="3340b4169b0e545d9e70cdb6b20bb491c9f17204" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="false" />
+      <Setting name="EnableMdm" value="true" />
+      <Setting name="HashingKey" value="https://sp-ppe.vault.azure.net:443/secrets/HashingKey/c512c68c18244909a6aa765efbb6b5b0" />
+      <Setting name="KeyVaultUri" value="https://sp-ppe.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spppeblob;AccountKey=$(spppeblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/PersistentRedisConnectionString/6ba29bad35a94e6b96703636e5aa863e" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/PushNotificationsConnectionString/2428944864a244d0bd69efb73750b76c" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/SearchServiceAdminKey/ca3d3bba95104f258ed9877d5ba1d7c7" />
+      <Setting name="SearchServiceName" value="sp-ppe" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-ppe.vault.azure.net:443/secrets/SendGridInstrumentationKey/c48aacb0d161405a837ef0989ebe7f6c" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/ServiceBusConnectionString/1d323e6eeb3e453c84e55dbc5bf71387" />
+      <Setting name="SigningKey" value="https://sp-ppe.vault.azure.net/keys/SigningKey/06585d0b49e342ffa02253ca09100da4" />
+      <Setting name="SocialPlusCertThumbprint" value="A09BF6B9314321AB611A65779B46801CE1B9DD4F" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-ppe.vault.azure.net:443/secrets/VolatileRedisConnectionString/03ae12ea203c4bc1a9ae03d358ac0cf7" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
