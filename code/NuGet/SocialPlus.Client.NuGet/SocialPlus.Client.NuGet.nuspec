@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- This nuspec file requires NuGet v3.3 or later.
+     To create the nuget package, use:
+     > nuget pack SocialPlus.Client.NuGet.nuspec
+        
+     You can push the nuget package using this command:
+     > nuget push SocialPlus.Client.<version>.nupkg -Source https://social-plus.pkgs.visualstudio.com/_packaging/SocialPlusCSharpClient/nuget/v3/index.json -ApiKey VSTS
+
+     You can unlist (but not delete) a nuget package using this command, however VSO has a bug and will throw you into an endless auth loop if you try this:
+     > nuget delete SocialPlus.Client <version> -Source https://social-plus.pkgs.visualstudio.com/_packaging/SocialPlusCSharpClient/nuget/v3/index.json -ApiKey VSTS
+-->
+<package>
+  <metadata minClientVersion="3.3">
+    <id>SocialPlus.Client</id>
+    <version>0.8.0.3-alpha</version>
+    <title>Library for communicating with the MSR Embedded Social SDK Service API</title>
+    <authors>Microsoft Research Embedded Social Software Development Kit Team</authors>
+    <owners>Microsoft Research Embedded Social Software Development Kit Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for communicating with the MSR Embedded Social SDK Service API</description>
+    <releaseNotes>None.</releaseNotes>
+    <copyright>Copyright (c) 2017</copyright>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.3" />
+      <dependency id="Microsoft.Rest.ClientRuntime" version="2.3.4" />
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
+      <dependency id="SocialPlus.Utils" version="0.8.0.1-alpha" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\Client\Windows\SocialPlus.Client\bin\Debug\SocialPlus.Client.dll" target="lib\net452\SocialPlus.Client.dll" />
+    <file src="..\..\Client\Windows\SocialPlus.Client\bin\Debug\SocialPlus.Client.pdb" target="lib\net452\SocialPlus.Client.pdb" />
+    <file src="..\..\Client\Windows\SocialPlus.Client\bin\Debug\SocialPlus.Client.xml" target="lib\net452\SocialPlus.Client.xml" />
+    <file src="..\..\Client\Windows\SocialPlus.Client\Models\bin\Debug\SocialPlus.Client.Models.dll" target="lib\net452\SocialPlus.Client.Models.dll" />
+    <file src="..\..\Client\Windows\SocialPlus.Client\Models\bin\Debug\SocialPlus.Client.Models.pdb" target="lib\net452\SocialPlus.Client.Models.pdb" />
+    <file src="..\..\Client\Windows\SocialPlus.Client\Models\bin\Debug\SocialPlus.Client.Models.xml" target="lib\net452\SocialPlus.Client.Models.xml" />
+    <file src="..\..\Client\Windows\SocialPlus.Client\HttpHandlers\bin\Debug\SocialPlus.Client.HttpMessageHandlers.dll" target="lib\net452\SocialPlus.Client.HttpMessageHandlers.dll" />
+    <file src="..\..\Client\Windows\SocialPlus.Client\HttpHandlers\bin\Debug\SocialPlus.Client.HttpMessageHandlers.pdb" target="lib\net452\SocialPlus.Client.HttpMessageHandlers.pdb" />
+    <file src="..\..\Client\Windows\SocialPlus.Client\HttpHandlers\bin\Debug\SocialPlus.Client.HttpMessageHandlers.xml" target="lib\net452\SocialPlus.Client.HttpMessageHandlers.xml" />
+  </files>
+</package>

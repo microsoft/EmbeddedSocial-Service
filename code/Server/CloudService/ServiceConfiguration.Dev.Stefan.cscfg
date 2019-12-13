@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="SocialPlus.Server.WorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AVERTKey/45374635b28047a19e19616368fcdba7" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/ff379a22fcca4b1588e24985dab48fdb" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureSqlConnectionString/1e28496e8559425380ca2e384c9ba718" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureStorageConnectionString/311d4c4a30e94333b79f360d101f23df" />
+      <Setting name="CDNUrl" value="https://sp-dev-stefan.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/CVSKey/86e458ee49c940b1a017e06952f26418" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-dev-stefan.vault.azure.net:443/secrets/HashingKey/5531d9fa31a74b2982b50411024f66be" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-stefan.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdevstefanblob;AccountKey=$(spdevstefanblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/PersistentRedisConnectionString/0c6ae1a8d4f44afaac7721f6c5fae239" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/PushNotificationsConnectionString/80d1f017d1564772b69a9a0ba47f7a6b" />
+      <Setting name="RateLimitPerMinute" value="6000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/SearchServiceAdminKey/6d4990974758409f8db35ec4e09b61bc" />
+      <Setting name="SearchServiceName" value="sp-dev-stefan" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/SendGridInstrumentationKey/8d75ac9223e2417cb1b1ce58d93c3552" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/ServiceBusConnectionString/a359cf3de96444809d17f15a19f2803e" />
+      <Setting name="SigningKey" value="https://sp-dev-stefan.vault.azure.net:443/keys/SigningKey/00afdc8516aa48f495f88f6e437f554c" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/VolatileRedisConnectionString/b466ff88653945f4a1ccc44b9cdc9f09" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AVERTKey/45374635b28047a19e19616368fcdba7" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/ff379a22fcca4b1588e24985dab48fdb" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureSqlConnectionString/1e28496e8559425380ca2e384c9ba718" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureStorageConnectionString/311d4c4a30e94333b79f360d101f23df" />
+      <Setting name="CDNUrl" value="https://sp-dev-stefan.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/CVSKey/86e458ee49c940b1a017e06952f26418" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-dev-stefan.vault.azure.net:443/secrets/HashingKey/5531d9fa31a74b2982b50411024f66be" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-stefan.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdevstefanblob;AccountKey=$(spdevstefanblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/PersistentRedisConnectionString/0c6ae1a8d4f44afaac7721f6c5fae239" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/PushNotificationsConnectionString/80d1f017d1564772b69a9a0ba47f7a6b" />
+      <Setting name="RateLimitPerMinute" value="6000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/SearchServiceAdminKey/6d4990974758409f8db35ec4e09b61bc" />
+      <Setting name="SearchServiceName" value="sp-dev-stefan" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/SendGridInstrumentationKey/8d75ac9223e2417cb1b1ce58d93c3552" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/ServiceBusConnectionString/a359cf3de96444809d17f15a19f2803e" />
+      <Setting name="SigningKey" value="https://sp-dev-stefan.vault.azure.net:443/keys/SigningKey/00afdc8516aa48f495f88f6e437f554c" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/VolatileRedisConnectionString/b466ff88653945f4a1ccc44b9cdc9f09" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRoleMicrosoftInternal">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AVERTKey/45374635b28047a19e19616368fcdba7" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/ff379a22fcca4b1588e24985dab48fdb" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureSqlConnectionString/1e28496e8559425380ca2e384c9ba718" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/AzureStorageConnectionString/311d4c4a30e94333b79f360d101f23df" />
+      <Setting name="CDNUrl" value="https://sp-dev-stefan.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/CVSKey/86e458ee49c940b1a017e06952f26418" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="False" />
+      <Setting name="EnableMdm" value="True" />
+      <Setting name="HashingKey" value="https://sp-dev-stefan.vault.azure.net:443/secrets/HashingKey/5531d9fa31a74b2982b50411024f66be" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-stefan.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdevstefanblob;AccountKey=$(spdevstefanblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/PersistentRedisConnectionString/0c6ae1a8d4f44afaac7721f6c5fae239" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/PushNotificationsConnectionString/80d1f017d1564772b69a9a0ba47f7a6b" />
+      <Setting name="RateLimitPerMinute" value="6000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/SearchServiceAdminKey/6d4990974758409f8db35ec4e09b61bc" />
+      <Setting name="SearchServiceName" value="sp-dev-stefan" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/SendGridInstrumentationKey/8d75ac9223e2417cb1b1ce58d93c3552" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/ServiceBusConnectionString/a359cf3de96444809d17f15a19f2803e" />
+      <Setting name="SigningKey" value="https://sp-dev-stefan.vault.azure.net:443/keys/SigningKey/00afdc8516aa48f495f88f6e437f554c" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-stefan.vault.azure.net:443/secrets/VolatileRedisConnectionString/b466ff88653945f4a1ccc44b9cdc9f09" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

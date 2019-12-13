@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{693039A5-CFF5-4D3A-9951-0FD3BBCB7501}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SocialPlus.Client.NuGet</RootNamespace>
+    <AssemblyName>SocialPlus.Client.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>lib\net452\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>lib\net452\SocialPlus.Client.NuGet.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>lib\net452\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>lib\net452\SocialPlus.Client.NuGet.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utils\SocialPlus.Utils.csproj">
+      <Project>{0c058285-65c4-416c-9c1b-db00e2aa222a}</Project>
+      <Name>SocialPlus.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Client\Windows\SocialPlus.Client\HttpHandlers\SocialPlus.Client.HttpMessageHandlers.csproj">
+      <Project>{8f20f512-2a8b-4a73-bd66-2761455e3548}</Project>
+      <Name>SocialPlus.Client.HttpMessageHandlers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Client\Windows\SocialPlus.Client\Models\SocialPlus.Client.Models.csproj">
+      <Project>{b19914f3-ff67-4d80-bc7a-6d0cbb740d3a}</Project>
+      <Name>SocialPlus.Client.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Client\Windows\SocialPlus.Client\SocialPlus.Client.csproj">
+      <Project>{787420df-168b-4c56-bf55-bd43e509acdd}</Project>
+      <Name>SocialPlus.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <AdditionalFiles Include="stylecop.json" />
+    <None Include="SocialPlus.Client.NuGet.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
+    <Analyzer Include="..\..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\..\Server\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+      powershell.exe -ExecutionPolicy Bypass $(ProjectDir)..\ValidateNuGetVersion.ps1 -DLLFileName $(SolutionDir)Client\Windows\SocialPlus.Client\bin\Debug\SocialPlus.Client.dll -NuspecFileName $(ProjectDir)SocialPlus.Client.NuGet.nuspec
+      powershell.exe -ExecutionPolicy Bypass $(ProjectDir)..\ValidateNuGetVersion.ps1 -DLLFileName $(SolutionDir)Client\Windows\SocialPlus.Client\Models\bin\Debug\SocialPlus.Client.Models.dll -NuspecFileName $(ProjectDir)SocialPlus.Client.NuGet.nuspec
+      powershell.exe -ExecutionPolicy Bypass $(ProjectDir)..\ValidateNuGetVersion.ps1 -DLLFileName $(SolutionDir)Client\Windows\SocialPlus.Client\HttpHandlers\bin\Debug\SocialPlus.Client.HttpMessageHandlers.dll -NuspecFileName $(ProjectDir)SocialPlus.Client.NuGet.nuspec
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

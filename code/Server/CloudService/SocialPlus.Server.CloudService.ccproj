@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>2.9</ProductVersion>
+    <ProjectGuid>e6a05abb-3e2d-4420-bc62-2cd75fdeeed2</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CloudService</RootNamespace>
+    <AssemblyName>CloudService</AssemblyName>
+    <StartDevelopmentStorage>False</StartDevelopmentStorage>
+    <Name>SocialPlus.Server.CloudService</Name>
+    <UseWebProjectPorts>True</UseWebProjectPorts>
+    <PackageEnableRemoteDebugger>False</PackageEnableRemoteDebugger>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-ppe' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>ppe</LocalProfile>
+    <ActivePublishProfile>Cloud.ppe</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-ppe-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>ppe</LocalProfile>
+    <ActivePublishProfile>Cloud.ppe</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-ppe-beihai' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>ppe-beihai</LocalProfile>
+    <ActivePublishProfile>Cloud.ppe-beihai</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-ppe-beihai-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>ppe-beihai</LocalProfile>
+    <ActivePublishProfile>Cloud.ppe-beihai</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-test1' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Test1</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Test1</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-test1-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Test1</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Test1</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-vso' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.VSO</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.VSO</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-vso-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.VSO</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.VSO</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-alec' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Alec</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Alec</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-alec-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Alec</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Alec</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-stefan' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Stefan</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Stefan</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-stefan-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Stefan</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Stefan</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-eduardo' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Eduardo</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Eduardo</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-eduardo-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Eduardo</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Eduardo</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-landon' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Landon</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Landon</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-landon-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Landon</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Landon</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-sharad' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Sharad</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Sharad</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-dev-sharad-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>Dev.Sharad</LocalProfile>
+    <ActivePublishProfile>Cloud.Dev.Sharad</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-api' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>api</LocalProfile>
+    <ActivePublishProfile>Cloud.api</ActivePublishProfile>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-api-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>api</LocalProfile>
+    <ActivePublishProfile>Cloud.api</ActivePublishProfile>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-prod-beihai' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>prod-beihai</LocalProfile>
+    <ActivePublishProfile>Cloud.prod-beihai</ActivePublishProfile>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-prod-beihai-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>prod-beihai</LocalProfile>
+    <ActivePublishProfile>Cloud.prod-beihai</ActivePublishProfile>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-test-perf' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>test-perf</LocalProfile>
+    <ActivePublishProfile>Cloud.test-perf</ActivePublishProfile>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'sp-test-perf-localhost' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LocalProfile>test-perf</LocalProfile>
+    <ActivePublishProfile>Cloud.test-perf</ActivePublishProfile>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <!-- Items for the project -->
+  <ItemGroup>
+    <ServiceDefinition Include="ServiceDefinition.csdef" />
+    <None Include="ServiceDefinition.http.csdef" />
+    <None Include="ServiceDefinition.ssl.csdef" />
+    <None Include="ServiceDefinition.ssl-prod.csdef" />
+    <ServiceConfiguration Include="ServiceConfiguration.Dev.Alec.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Dev.Eduardo.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Dev.Landon.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Dev.Sharad.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Dev.Stefan.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Dev.Test1.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Dev.VSO.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.Local.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.api.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.ppe.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.ppe-beihai.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.prod-beihai.cscfg" />
+    <ServiceConfiguration Include="ServiceConfiguration.test-perf.cscfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Profiles" />
+    <Folder Include="SocialPlus.Server.WebRoleContent" />
+    <Folder Include="SocialPlus.Server.WebRoleMicrosoftInternalContent" />
+    <Folder Include="SocialPlus.Server.WorkerRoleContent" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebRoleMicrosoftInternal\SocialPlus.Server.WebRoleMicrosoftInternal.csproj">
+      <Name>SocialPlus.Server.WebRoleMicrosoftInternal</Name>
+      <Project>{bab75857-e8dc-4666-8188-c6ce74eca15b}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>SocialPlus.Server.WebRoleMicrosoftInternal</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+    <ProjectReference Include="..\WebRole\SocialPlus.Server.WebRole.csproj">
+      <Name>SocialPlus.Server.WebRole</Name>
+      <Project>{94eac8ed-af23-4ac4-990d-725402a762ff}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>SocialPlus.Server.WebRole</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkerRole\SocialPlus.Server.WorkerRole.csproj">
+      <Name>SocialPlus.Server.WorkerRole</Name>
+      <Project>{3bebf930-757b-450b-85fa-659d2452e0fc}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>SocialPlus.Server.WorkerRole</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <DiagnosticsConfiguration Include="SocialPlus.Server.WebRoleContent\diagnostics.wadcfgx" />
+    <DiagnosticsConfiguration Include="SocialPlus.Server.WebRoleMicrosoftInternalContent\diagnostics.wadcfgx" />
+    <DiagnosticsConfiguration Include="SocialPlus.Server.WorkerRoleContent\diagnostics.wadcfgx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\Cloud.Dev.Alec.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.Dev.Eduardo.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.Dev.Landon.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.Dev.Sharad.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.Dev.Stefan.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.Dev.Test1.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.Dev.VSO.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.api.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.ppe.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.ppe-beihai.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.prod-beihai.azurePubxml" />
+    <PublishProfile Include="Profiles\Cloud.test-perf.azurePubxml" />
+  </ItemGroup>
+  <!-- Import the target files for this project template -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.9\</CloudExtensionsDir>
+  </PropertyGroup>
+  <Import Project="$(CloudExtensionsDir)Microsoft.WindowsAzure.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)config_service_definition.bat $(ProjectDir) $(ConfigurationName)</PreBuildEvent>
+  </PropertyGroup>
+</Project>

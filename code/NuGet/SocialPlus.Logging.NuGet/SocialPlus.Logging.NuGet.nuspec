@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<package >
+  <metadata minClientVersion="0.1">
+    <id>SocialPlus.Logging</id>
+    <version>0.1.0.3-alpha</version>
+    <title>Library for the logging needs of MSR Embedded Social</title>
+    <authors>Microsoft Research Embedded Social Software Development Kit Team</authors>
+    <owners>Microsoft Research Embedded Social Software Development Kit Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for the logging needs of MSR Embedded Social</description>
+    <releaseNotes>None.</releaseNotes>
+    <copyright>Copyright (c) 2017</copyright>
+    <dependencies>
+      <dependency id="Microsoft.Diagnostics.Tracing.EventSource" version="1.1.28" />
+      <dependency id="Microsoft.Diagnostics.Tracing.EventSource.Redist" version="1.1.28" />
+      <dependency id="Microsoft.Extensions.Configuration.Abstractions" version="1.1.0" />
+      <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="1.1.0" />
+      <dependency id="Microsoft.Extensions.Logging" version="1.1.0" />
+      <dependency id="Microsoft.Extensions.Logging.Abstractions" version="1.1.0" />
+      <dependency id="Microsoft.Extensions.Logging.Console" version="1.1.0" />
+      <dependency id="Microsoft.Extensions.Logging.Debug" version="1.1.0" />
+      <dependency id="Microsoft.Extensions.Logging.TraceSource" version="1.1.0" />
+      <dependency id="Microsoft.Extensions.Primitives" version="1.1.0" />
+      <dependency id="Microsoft.NETCore.Platforms" version="1.1.0" />
+      <dependency id="NETStandard.Library" version="1.6.1" />
+      <dependency id="SocialPlus.Utils" version="0.8.0.1-alpha" />
+      <dependency id="StyleCop.Analyzers" version="1.0.0" />
+      <dependency id="System.Collections" version="4.3.0" />
+      <dependency id="System.Collections.Concurrent" version="4.3.0" />
+      <dependency id="System.ComponentModel" version="4.3.0" />
+      <dependency id="System.Diagnostics.Debug" version="4.3.0" />
+      <dependency id="System.Diagnostics.Tools" version="4.3.0" />
+      <dependency id="System.Diagnostics.Tracing" version="4.3.0" />
+      <dependency id="System.Globalization" version="4.3.0" />
+      <dependency id="System.IO" version="4.3.0" />
+      <dependency id="System.IO.Compression" version="4.3.0" />
+      <dependency id="System.Linq" version="4.3.0" />
+      <dependency id="System.Linq.Expressions" version="4.3.0" />
+      <dependency id="System.Net.Http" version="4.3.0" />
+      <dependency id="System.Net.Primitives" version="4.3.0" />
+      <dependency id="System.ObjectModel" version="4.3.0" />
+      <dependency id="System.Reflection" version="4.3.0" />
+      <dependency id="System.Reflection.Extensions" version="4.3.0" />
+      <dependency id="System.Reflection.Primitives" version="4.3.0" />
+      <dependency id="System.Resources.ResourceManager" version="4.3.0" />
+      <dependency id="System.Runtime" version="4.3.0" />
+      <dependency id="System.Runtime.CompilerServices.Unsafe" version="4.3.0" />
+      <dependency id="System.Runtime.Extensions" version="4.3.0" />
+      <dependency id="System.Runtime.InteropServices" version="4.3.0" />
+      <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" />
+      <dependency id="System.Runtime.Numerics" version="4.3.0" />
+      <dependency id="System.Text.Encoding" version="4.3.0" />
+      <dependency id="System.Text.Encoding.Extensions" version="4.3.0" />
+      <dependency id="System.Text.RegularExpressions" version="4.3.0" />
+      <dependency id="System.Threading" version="4.3.0" />
+      <dependency id="System.Threading.Tasks" version="4.3.0" />
+      <dependency id="System.Threading.Timer" version="4.3.0" />
+      <dependency id="System.Xml.ReaderWriter" version="4.3.0" />
+      <dependency id="System.Xml.XDocument" version="4.3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\External\LoggingEventSource\bin\Debug\Microsoft.Extensions.Logging.EventSource.dll" target="lib\net452\Microsoft.Extensions.Logging.EventSource.dll" />
+    <file src="..\..\Logging\bin\Debug\SocialPlus.Logging.dll" target="lib\net452\SocialPlus.Logging.dll" />
+    <file src="..\..\Logging\bin\Debug\SocialPlus.Logging.xml" target="lib\net452\SocialPlus.Logging.xml" />
+  </files>
+</package>

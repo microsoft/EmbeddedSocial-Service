@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata minClientVersion="0.1">
+    <id>SocialPlus.Server.KVLibrary</id>
+    <version>0.1.6.2-alpha</version>
+    <title>Library for the Azure Key-Vault needs of MSR Embedded Social</title>
+    <authors>Microsoft Research Embedded Social Software Development Kit Team</authors>
+    <owners>Microsoft Research Embedded Social Software Development Kit Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for the Azure Key-Vault needs of MSR Embedded Social</description>
+    <releaseNotes>None.</releaseNotes>
+    <copyright>Copyright (c) 2017</copyright>
+    <dependencies>
+      <dependency id="Hyak.Common" version="1.1.0" />
+      <dependency id="Microsoft.Azure.Common" version="2.1.0" />
+      <dependency id="Microsoft.Azure.Common.Dependencies" version="1.0.0" />
+      <dependency id="Microsoft.Azure.KeyVault" version="1.0.0" />
+      <dependency id="Microsoft.Bcl" version="1.1.10" />
+      <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+      <dependency id="Microsoft.Bcl.Build" version="1.0.21" />
+      <dependency id="Microsoft.Net.Http" version="2.2.29" />
+      <dependency id="Newtonsoft.Json" version="8.0.3" />
+      <dependency id="SocialPlus.Logging" version="0.1.0.3-alpha" />
+      <dependency id="SocialPlus.Utils" version="0.8.0.1-alpha" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\Server\KVLibrary\bin\Debug\SocialPlus.Server.KVLibrary.dll" target="lib\net452\SocialPlus.Server.KVLibrary.dll" />
+    <file src="..\..\Server\KVLibrary\bin\Debug\SocialPlus.Server.KVLibrary.xml" target="lib\net452\SocialPlus.Server.KVLibrary.xml" />
+  </files>
+</package>

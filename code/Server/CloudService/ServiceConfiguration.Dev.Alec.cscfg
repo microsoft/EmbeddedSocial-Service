@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="SocialPlus.Server.WorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AVERTKey/3b99d4cd82ce47cfac26077c1d92c21b" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/ca19f0b1f36b41228d1230c61683d06a" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureSqlConnectionString/468cc00053c2483284d61b7f72d5083c" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureStorageConnectionString/2303b8e7dea3495088978150dc108927" />
+      <Setting name="CDNUrl" value="https://sp-dev-alec.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/CVSKey/2d7e27d073214eb7a767f4596179a5f8" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="false" />
+      <Setting name="EnableMdm" value="true" />
+      <Setting name="HashingKey" value="https://sp-dev-alec.vault.azure.net:443/secrets/HashingKey/96fa7e6f66d14500a386d82f043f542c" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-alec.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdevalecblob;AccountKey=$(_spdevalecblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/PersistentRedisConnectionString/2f071c23fe5d41d690dcaff8d8189e0a" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/PushNotificationsConnectionString/846212e6e6224d8884fe0eb3aeb93870" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/SearchServiceAdminKey/35118289b1f144fb8245126282f65b0b" />
+      <Setting name="SearchServiceName" value="sp-dev-alec" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/SendGridInstrumentationKey/c83ebbda95044d66b9a068bee5ba0d36" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/ServiceBusConnectionString/312c6f79a4424664a3f2d106df439db6" />
+      <Setting name="SigningKey" value="https://sp-dev-alec.vault.azure.net:443/keys/SigningKey/704f265d20e340018e1e4671f94b5f04" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/VolatileRedisConnectionString/5330fc699a5c42aaa6fc8913e0a34250" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AVERTKey/3b99d4cd82ce47cfac26077c1d92c21b" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/ca19f0b1f36b41228d1230c61683d06a" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureSqlConnectionString/468cc00053c2483284d61b7f72d5083c" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureStorageConnectionString/2303b8e7dea3495088978150dc108927" />
+      <Setting name="CDNUrl" value="https://sp-dev-alec.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/CVSKey/2d7e27d073214eb7a767f4596179a5f8" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="false" />
+      <Setting name="EnableMdm" value="true" />
+      <Setting name="HashingKey" value="https://sp-dev-alec.vault.azure.net:443/secrets/HashingKey/96fa7e6f66d14500a386d82f043f542c" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-alec.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdevalecblob;AccountKey=$(_spdevalecblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/PersistentRedisConnectionString/2f071c23fe5d41d690dcaff8d8189e0a" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/PushNotificationsConnectionString/846212e6e6224d8884fe0eb3aeb93870" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/SearchServiceAdminKey/35118289b1f144fb8245126282f65b0b" />
+      <Setting name="SearchServiceName" value="sp-dev-alec" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/SendGridInstrumentationKey/c83ebbda95044d66b9a068bee5ba0d36" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/ServiceBusConnectionString/312c6f79a4424664a3f2d106df439db6" />
+      <Setting name="SigningKey" value="https://sp-dev-alec.vault.azure.net:443/keys/SigningKey/704f265d20e340018e1e4671f94b5f04" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/VolatileRedisConnectionString/5330fc699a5c42aaa6fc8913e0a34250" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SocialPlus.Server.WebRoleMicrosoftInternal">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" value="72f988bf-86f1-41af-91ab-2d7cd011db47" />
+      <Setting name="AADEmbeddedSocialClientId" value="155f75c0-e6e2-4953-af4e-aaaf7300ba23" />
+      <Setting name="AVERTCertThumbprint" value="0AEDCDED02B7A6C9F799FB0790BC72F9806AE6EA" />
+      <Setting name="AVERTKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AVERTKey/3b99d4cd82ce47cfac26077c1d92c21b" />
+      <Setting name="AVERTUrl" value="https://cvsnaprod.azure-api.net/ppe/Avert/" />
+      <Setting name="AzureBlobStorageConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureBlobStorageConnectionString/ca19f0b1f36b41228d1230c61683d06a" />
+      <Setting name="AzureSqlConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureSqlConnectionString/468cc00053c2483284d61b7f72d5083c" />
+      <Setting name="AzureStorageConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/AzureStorageConnectionString/2303b8e7dea3495088978150dc108927" />
+      <Setting name="CDNUrl" value="https://sp-dev-alec.azureedge.net/" />
+      <Setting name="CVSKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/CVSKey/2d7e27d073214eb7a767f4596179a5f8" />
+      <Setting name="CVSUrl" value="https://cvsnaprod.azure-api.net/cv/ppe/api" />
+      <Setting name="CVSX509Thumbprint" value="6d2c0aa38b6f03d44915fed0108bef94f3bad51f" />
+      <Setting name="EnableAzureSettingsReaderTracing" value="false" />
+      <Setting name="EnableMdm" value="true" />
+      <Setting name="HashingKey" value="https://sp-dev-alec.vault.azure.net:443/secrets/HashingKey/96fa7e6f66d14500a386d82f043f542c" />
+      <Setting name="KeyVaultUri" value="https://sp-dev-alec.vault.azure.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=spdevalecblob;AccountKey=$(_spdevalecblob.key_)" />
+      <Setting name="PersistentRedisConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/PersistentRedisConnectionString/2f071c23fe5d41d690dcaff8d8189e0a" />
+      <Setting name="PushNotificationsConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/PushNotificationsConnectionString/846212e6e6224d8884fe0eb3aeb93870" />
+      <Setting name="RateLimitPerMinute" value="3000" />
+      <Setting name="SearchServiceAdminKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/SearchServiceAdminKey/35118289b1f144fb8245126282f65b0b" />
+      <Setting name="SearchServiceName" value="sp-dev-alec" />
+      <Setting name="SendGridInstrumentationKey" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/SendGridInstrumentationKey/c83ebbda95044d66b9a068bee5ba0d36" />
+      <Setting name="ServiceBusBatchIntervalMs" value="0" />
+      <Setting name="ServiceBusConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/ServiceBusConnectionString/312c6f79a4424664a3f2d106df439db6" />
+      <Setting name="SigningKey" value="https://sp-dev-alec.vault.azure.net:443/keys/SigningKey/704f265d20e340018e1e4671f94b5f04" />
+      <Setting name="SocialPlusCertThumbprint" value="5C9B335BAD911D7CE64263192F65E040779530BC" />
+      <Setting name="VolatileRedisConnectionString" value="kv:https://sp-dev-alec.vault.azure.net:443/secrets/VolatileRedisConnectionString/5330fc699a5c42aaa6fc8913e0a34250" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" thumbprint="5C9B335BAD911D7CE64263192F65E040779530BC" thumbprintAlgorithm="sha1" />
+      <Certificate name="SocialPlusSSL" thumbprint="cdd1bb89a99a8a42c487fc816eaefff1493f04c6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

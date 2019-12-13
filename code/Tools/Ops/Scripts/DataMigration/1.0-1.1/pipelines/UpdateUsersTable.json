@@ -1,0 +1,44 @@
+{
+  "name": "UpdateUsersTable",
+  "properties": {
+    "description": "Substitute Beihai with AADS2S in the IdentityProvider column in the Users Table",
+    "activities": [
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity1",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "UsersInputTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "UsersOutputTable"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.TransformColumn",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "IdentityProviderType",
+            "columnType": "string",
+            "ifColumnValueMatches": "Beihai",
+            "replaceColumnValueWith": "AADS2S",
+            "ifRowKeyContains": "Beihai",
+            "replaceRowKeySubStrWith": "AADS2S"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      }
+    ],
+    "isPaused": false,
+    "pipelineMode": "OneTime"
+  }
+}

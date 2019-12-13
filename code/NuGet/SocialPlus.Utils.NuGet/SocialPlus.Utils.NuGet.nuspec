@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- To create the nuget package:
+     > nuget pack SocialPlus.Utils.NuGet.nuspec
+        
+     You can publish the nuget package using this command:
+     > nuget push SocialPlus.Utils.<version>.nupkg -Source https://social-plus.pkgs.visualstudio.com/_packaging/SocialPlusCSharpClient/nuget/v3/index.json -ApiKey VSTS
+
+     You can unlist (but not delete) a nuget package using this command, however VSO has a bug and will throw you into an endless auth loop if you try this:
+     > nuget delete SocialPlus.Utils <version> -Source https://social-plus.pkgs.visualstudio.com/_packaging/SocialPlusCSharpClient/nuget/v3/index.json -ApiKey VSTS
+-->
+<package >
+  <metadata minClientVersion="3.3">
+    <id>SocialPlus.Utils</id>
+    <version>0.8.0.1-alpha</version>
+    <title>Library with utility tools used by MSR Embedded Social</title>
+    <authors>Microsoft Research Embedded Social Software Development Kit Team</authors>
+    <owners>Microsoft Research Embedded Social Software Development Kit Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library with utility tools used by MSR Embedded Social</description>
+    <releaseNotes>None.</releaseNotes>
+    <copyright>Copyright (c) 2017</copyright>
+    <dependencies>
+      <dependency id="Microsoft.IdentityModel.Clients.ActiveDirectory" version="2.24.304111323" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\Utils\bin\Debug\SocialPlus.Utils.dll" target="lib\net452\SocialPlus.Utils.dll" />
+    <file src="..\..\Utils\bin\Debug\SocialPlus.Utils.xml" target="lib\net452\SocialPlus.Utils.xml" />
+  </files>
+</package>

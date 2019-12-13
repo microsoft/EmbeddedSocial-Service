@@ -1,0 +1,16 @@
+{
+  "name": "UserFollowersOutputTable-1",
+  "properties": {
+    "published": false,
+    "type": "AzureTable",
+    "linkedServiceName": "placeholder-service-name",
+    "typeProperties": {
+      "tableName": "UserFollowers"
+    },
+    "availability": {
+      "frequency": "Minute",
+      "interval": 15,
+      "style": "StartOfInterval"
+    }
+  }
+}

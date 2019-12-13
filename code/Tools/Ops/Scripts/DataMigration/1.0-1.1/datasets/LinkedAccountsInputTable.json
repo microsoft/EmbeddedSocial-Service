@@ -1,0 +1,27 @@
+{
+  "name": "LinkedAccountsInputTable",
+  "properties": {
+    "published": false,
+    "type": "AzureTable",
+    "linkedServiceName": "placeholder-service-name",
+    "typeProperties": {
+      "tableName": "LinkedAccounts"
+    },
+    "availability": {
+      "frequency": "Minute",
+      "interval": 15,
+      "style": "StartOfInterval"
+    },
+    "external": true,
+    "policy": {
+      "validation": {
+        "minimumRows": 1
+      },
+      "externalData": {
+        "retryInterval": "00:01:00",
+        "retryTimeout": "00:10:00",
+        "maximumRetry": 3
+      }
+    }
+  }
+}

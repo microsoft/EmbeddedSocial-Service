@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WorkerRole name="SocialPlus.Server.WorkerRole" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" />
+      <Setting name="AADEmbeddedSocialClientId" />
+      <Setting name="AVERTCertThumbprint" />
+      <Setting name="AVERTKey" />
+      <Setting name="AVERTUrl" />
+      <Setting name="AzureBlobStorageConnectionString" />
+      <Setting name="AzureSqlConnectionString" />
+      <Setting name="AzureStorageConnectionString" />
+      <Setting name="CDNUrl" />
+      <Setting name="CVSKey" />
+      <Setting name="CVSUrl" />
+      <Setting name="CVSX509Thumbprint" />
+      <Setting name="EnableAzureSettingsReaderTracing" />
+      <Setting name="EnableMdm" />
+      <Setting name="HashingKey" />
+      <Setting name="KeyVaultUri" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="PersistentRedisConnectionString" />
+      <Setting name="PushNotificationsConnectionString" />
+      <Setting name="RateLimitPerMinute" />
+      <Setting name="SearchServiceAdminKey" />
+      <Setting name="SearchServiceName" />
+      <Setting name="SendGridInstrumentationKey" />
+      <Setting name="ServiceBusBatchIntervalMs" />
+      <Setting name="ServiceBusConnectionString" />
+      <Setting name="SigningKey" />
+      <Setting name="SocialPlusCertThumbprint" />
+      <Setting name="VolatileRedisConnectionString" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WorkerRole>
+  <WebRole name="SocialPlus.Server.WebRole" vmsize="Small">
+    <Runtime executionContext="elevated" />
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HTTP" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="HTTP" protocol="http" port="80" />
+    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" />
+      <Setting name="AADEmbeddedSocialClientId" />
+      <Setting name="AVERTCertThumbprint" />
+      <Setting name="AVERTKey" />
+      <Setting name="AVERTUrl" />
+      <Setting name="AzureBlobStorageConnectionString" />
+      <Setting name="AzureSqlConnectionString" />
+      <Setting name="AzureStorageConnectionString" />
+      <Setting name="CDNUrl" />
+      <Setting name="CVSKey" />
+      <Setting name="CVSUrl" />
+      <Setting name="CVSX509Thumbprint" />
+      <Setting name="EnableAzureSettingsReaderTracing" />
+      <Setting name="EnableMdm" />
+      <Setting name="HashingKey" />
+      <Setting name="KeyVaultUri" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="PersistentRedisConnectionString" />
+      <Setting name="PushNotificationsConnectionString" />
+      <Setting name="RateLimitPerMinute" />
+      <Setting name="SearchServiceAdminKey" />
+      <Setting name="SearchServiceName" />
+      <Setting name="SendGridInstrumentationKey" />
+      <Setting name="ServiceBusBatchIntervalMs" />
+      <Setting name="ServiceBusConnectionString" />
+      <Setting name="SigningKey" />
+      <Setting name="SocialPlusCertThumbprint" />
+      <Setting name="VolatileRedisConnectionString" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="SocialPlusSSL" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+  <WebRole name="SocialPlus.Server.WebRoleMicrosoftInternal" vmsize="Small">
+    <Runtime executionContext="elevated" />
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HTTP" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="HTTP" protocol="http" port="81" />
+    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="AADMicrosoftClientId" />
+      <Setting name="AADEmbeddedSocialClientId" />
+      <Setting name="AVERTCertThumbprint" />
+      <Setting name="AVERTKey" />
+      <Setting name="AVERTUrl" />
+      <Setting name="AzureBlobStorageConnectionString" />
+      <Setting name="AzureSqlConnectionString" />
+      <Setting name="AzureStorageConnectionString" />
+      <Setting name="CDNUrl" />
+      <Setting name="CVSKey" />
+      <Setting name="CVSUrl" />
+      <Setting name="CVSX509Thumbprint" />
+      <Setting name="EnableAzureSettingsReaderTracing" />
+      <Setting name="EnableMdm" />
+      <Setting name="HashingKey" />
+      <Setting name="KeyVaultUri" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="PersistentRedisConnectionString" />
+      <Setting name="PushNotificationsConnectionString" />
+      <Setting name="RateLimitPerMinute" />
+      <Setting name="SearchServiceAdminKey" />
+      <Setting name="SearchServiceName" />
+      <Setting name="SendGridInstrumentationKey" />
+      <Setting name="ServiceBusBatchIntervalMs" />
+      <Setting name="ServiceBusConnectionString" />
+      <Setting name="SigningKey" />
+      <Setting name="SocialPlusCertThumbprint" />
+      <Setting name="VolatileRedisConnectionString" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SocialPlus" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="SocialPlusSSL" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+</ServiceDefinition>

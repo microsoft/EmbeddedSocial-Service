@@ -1,0 +1,318 @@
+{
+  "name": "ProcessAppsTable",
+  "properties": {
+    "description": "Add DisableHandleValidation, ClientId,ClientRedirectUri, ClientSecret columns, delete UseDefault column, modify column values in Apps table as per specified rules",
+    "activities": [
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity1",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.AddColumn",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "DisableHandleValidation",
+            "type": "bool",
+            "defaultValue": "False",
+            "rowKeyPrefix": "ProfilesObject:"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity2",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          },
+          {
+            "name": "AppsOutputTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable-1"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.AddColumn",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "ClientId",
+            "type": "string",
+            "defaultValue": "",
+            "rowKeyPrefix": "IdentityCredentialsObject:Beihai"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity3",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          },
+          {
+            "name": "AppsOutputTable-1"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable-2"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.AddColumn",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "ClientRedirectUri",
+            "type": "string",
+            "defaultValue": "",
+            "rowKeyPrefix": "IdentityCredentialsObject:Beihai"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity4",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          },
+          {
+            "name": "AppsOutputTable-2"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable-3"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.AddColumn",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "ClientSecret",
+            "type": "string",
+            "defaultValue": "N/A",
+            "rowKeyPrefix": "IdentityCredentialsObject:Beihai"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity5",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          },
+          {
+            "name": "AppsOutputTable-3"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable-4"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.DeleteColumn",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "UseDefault",
+            "rowKeyPrefix": "IdentityCredentialsObject:"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity6",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          },
+          {
+            "name": "AppsOutputTable-4"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable-5"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.UpdateAppsTable",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "DisableHandleValidation",
+            "columnType": "bool",
+            "rowKeyPrefix": "ProfilesObject:",
+            "partitionKeyOwnerValueRule": "Beihai=true;EndToEndTests=true"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity7",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          },
+          {
+            "name": "AppsOutputTable-5"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable-6"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.UpdateAppsTable",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "ClientId",
+            "columnType": "string",
+            "rowKeyPrefix": "IdentityCredentialsObject:Beihai",
+            "partitionKeyOwnerValueRule": "EndToEndTests=72f988bf-86f1-41af-91ab-2d7cd011db47;Beihai=72f988bf-86f1-41af-91ab-2d7cd011db47;Academic=72f988bf-86f1-41af-91ab-2d7cd011db47;SMU=4cc0e975-9cf8-476b-8e77-2d378393e14f"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity8",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          },
+          {
+            "name": "AppsOutputTable-6"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable-7"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.UpdateAppsTable",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "columnName": "ClientRedirectUri",
+            "columnType": "string",
+            "rowKeyPrefix": "IdentityCredentialsObject:Beihai",
+            "partitionKeyOwnerValueRule": "EndToEndTests=http://localhost/beihaiclient;Beihai=https://vault.azure.net;Academic=http://academic.microsoft.com;SMU=https://athena.smu.edu.sg/mobisysaad/login.php"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      },
+      {
+        "name": "SocialPlus.Server.DataFactory.Activity9",
+        "type": "DotNetActivity",
+        "inputs": [
+          {
+            "name": "AppsInputTable"
+          },
+          {
+            "name": "AppsOutputTable-7"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AppsOutputTable-8"
+          }
+        ],
+        "linkedServiceName": "placeholder-batch-name",
+        "typeProperties": {
+          "assemblyName": "SocialPlus.Server.DataFactory.dll",
+          "entryPoint": "SocialPlus.Server.DataFactory.TransformColumn",
+          "packageLinkedService": "placeholder-storage-name",
+          "packageFile": "datafactoryactivities/SocialPlus.Server.DataFactory.zip",
+          "extendedProperties": {
+            "ifRowKeyContains": "Beihai",
+            "replaceRowKeySubStrWith": "AADS2S"
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "concurrency": 2,
+          "retry": 1
+        }
+      }
+    ],
+    "isPaused": false,
+    "pipelineMode": "OneTime"
+  }
+}
