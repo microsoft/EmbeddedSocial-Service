@@ -24,6 +24,32 @@ bld/
 [Oo]bj/
 [Ll]og/
 
+# Embedded Social build files
+BuildInfoBranchName.txt
+BuildInfoCommitHash.txt
+BuildInfoDirtyFiles.txt
+BuildInfoDate.txt
+BuildInfoHostname.txt
+BuildInfoTag.txt
+
+# Embedded Social cloud service csdef file must be excluded
+# Instead, we include two csdef files, one for http and another for ssl,
+#    and add a pre-build step in which the relevent file is copied over
+#    the cloud service csef file depending on the environment should use 
+#    SSL or HTTP
+code/Server/CloudService/ServiceDefinition.csdef
+
+# Embedded Social WebRole*.dll.config files.
+code/Server/WebRole*/SocialPlus.Server.WebRole*.dll.config
+
+# Embedded Social WebRole*/Resources/*.jpg files
+code/Server/WebRole*/Resources/*.jpg
+
+# Embedded Social NuGet project build results
+code/NuGet/SocialPlus.Client.NuGet/lib
+code/NuGet/SocialPlus.Utils.NuGet/lib
+
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
