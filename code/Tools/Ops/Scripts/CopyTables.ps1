@@ -9,11 +9,11 @@
 
 # name and storage key for storage account you are copying the tables from
 $sourceAcctName = "socialplusprod"
-$sourceKey = "Z5ipQo718UOr/iCKa05O/KC4eiReQoC48wpJPVgqVsShKfr2dYrI/ZItgneeAKdTo2waZb9iG04gLHSAqOSt5g=="
+$sourceKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 # name and storage key for storage account you are copying the tables to
 $destAcctName = "spprod1"
-$destKey = "pAz1XGtTsJyPLi/xZBPlPQYv975XJVdh+1VzIXglo+KGu6kJ1RVy9tZHcV0HobXP3V2/LB/lU8Xx4+wiIxwKdQ=="
+$destKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 $localDir = "d:\home\alecw\research\social-plus\azcopy"
 

@@ -239,7 +239,7 @@ function New-SocialPlusEnvironment {
         
         # Write to the manifest the AAD Embedded Social clientID and appKey (appKey will soon be deprecated)
         $manifest.AADEmbeddedSocialClientId = $EmbeddedSocialClientId
-        $manifest.AADSocialPlusAppKey = "/pEgX3hkpgZ1ozH4GCSfv88nS59wd8pfiTydL2daV2M="
+        $manifest.AADSocialPlusAppKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
         # Write to the manifest the AAD Microsoft client ID
         $manifest.AADMicrosoftClientId = "72f988bf-86f1-41af-91ab-2d7cd011db47"
