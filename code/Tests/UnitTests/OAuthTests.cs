@@ -47,7 +47,7 @@ namespace SocialPlus.UnitTests
         /// 3) Run all tests
         /// Will look like this:
         /// </summary>
-        public const string MyURL = "http://research.microsoft.com/en-us/#access_token=XX&user_id=XX";
+        public const string MyURL = "http://research.microsoft.com/en-us/#access_token=XX&token_type=bearer&expires_in=3600&scope=wl.signin%20wl.basic&authentication_token=XX&user_id=XX";
 
         // ***************************
         // Use for Facebook Login
