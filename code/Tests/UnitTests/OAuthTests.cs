@@ -21,17 +21,17 @@ namespace SocialPlus.UnitTests
         /// <summary>
         /// App Name for MSA
         /// </summary>
-        public const string MSAAppName = "SocialPlusOAuthTest";
+        public const string MSAAppName = "XX"; // create an MSA app and insert the appropriate values here and below
 
         /// <summary>
         /// Client ID
         /// </summary>
-        public const string MSAClientID = "0000000040169587";
+        public const string MSAClientID = "XX";
 
         /// <summary>
         /// Secret Key
         /// </summary>
-        public const string MSASecretKey = "mQ52IpidrjN46aSsDkGH0S0cEfIGr5i";
+        public const string MSASecretKey = "XX";
 
         /// <summary>
         /// URL that is used to verify authentication
@@ -42,12 +42,12 @@ namespace SocialPlus.UnitTests
         /// Need to Manually get the Access Token for a Microsoft Account before running tests.
         /// Directions:
         /// 1) Put this URL in browser:
-        /// <![CDATA[https://login.live.com/oauth20_authorize.srf?client_id=0000000040169587&scope=wl.signin%20wl.basic&response_type=token&redirect_uri=http://research.microsoft.com]]>
+        /// <![CDATA[https://login.live.com/oauth20_authorize.srf?client_id=XX&scope=wl.signin%20wl.basic&response_type=token&redirect_uri=http://research.microsoft.com]]>
         /// 2) Redirects to RMC - copy the redirected URL in MyURL constant below ... token will last for 10 mins
         /// 3) Run all tests
         /// Will look like this:
         /// </summary>
-        public const string MyURL = "http://research.microsoft.com/en-us/#access_token=EwCAAq1DBAAUGCCXc8wU/zFu9QnLdZXy%2bYnElFkAAX1f9t4%2bdf2r0ZZkqUEBcKpCRvNmHAyOHPXy82EFlkd2rznqhW/BDcJAaYT1wgTyT8YTZZ37fOmXM3y4M6a1woiq839xinQQ6JeO6lYgFYSsab/JlelPNNtrmspYeTZHUvBfgKab9Zt64ChlHXSK2rHHADtLiqCYPCtnVAQeHcOBFd4hKszTKfpFkUXRwOCWHmw30QYR3fF4RaBivxiJEK1o%2bYW6Jx4Owsj3sH%2b/IhB9QtnbqFIXBlcU7QDQFoL3IpjXSM8cRGUxqxuvsrkzgRyz0mm97fVdnJceTKLiHqNjfnQwg6U8ZROGzzjok%2bfxb0mcEFRiFCZZb%2bI7cO8/QGQDZgAACJCGB6QUKWI7UAE8CNkrblUbsmihTSE8/Is5zK5ad5J66ii9tNbpJOyWXYTL3AZ2D/TC8rpaBQbwBIkM/n6wyoVQKaYH99zLCixQ9Aqf4ntkhYAX7wRnO0JVdHkRvOILh2ADYL5OpdkNnfNTXxF%2bMGjh1GlaHLEcsDI6w8As0lo8TwAJkNZez95ZqT5mr6DcbNeTibT6Qb1AEyHOMCM%2bKaGYB731kHkLcdRURU7KGQKD/fRwnGkALmu1hO2Wkd%2besXtnLSbS83BfTt%2bgdkaXhECRukyfW7HwesEWNnma0QykUyspGAuYJ5DmQL9bPL%2bQmdStkQWGef8McqQUgbCkcsy33KtFsgxzTtRqughMDe/aOMiUTFGug1wQsNyrs90OpR/7tgmDlgp3Hobbu6iK6Jc40EhbGHsxe%2bmsntj78sDzAZoORE12eXv3GZpuL1r04YJTLfvXav0I0kRMAQ%3d%3d&token_type=bearer&expires_in=3600&scope=wl.signin%20wl.basic&authentication_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IjEifQ.eyJ2ZXIiOjEsImlzcyI6InVybjp3aW5kb3dzOmxpdmVpZCIsImV4cCI6MTQ0OTM0Mzg2MSwidWlkIjoiZjJkNTE4ZGQyZDQzYjA5ZGE5ZTAyNGQyZjQ5ZDY4NDkiLCJhdWQiOiJzcC1kZXYtdGVzdC5jbG91ZGFwcC5uZXQiLCJ1cm46bWljcm9zb2Z0OmFwcHVyaSI6ImFwcGlkOi8vMDAwMDAwMDA0MDE2OTU4NyIsInVybjptaWNyb3NvZnQ6YXBwaWQiOiIwMDAwMDAwMDQwMTY5NTg3In0.hYRG3GPBzkJOHrsHBrUaNOLPSvHIkjDr9rkj3NtdW2U&user_id=f2d518dd2d43b09da9e024d2f49d6849";
+        public const string MyURL = "http://research.microsoft.com/en-us/#access_token=XX&user_id=XX";
 
         // ***************************
         // Use for Facebook Login
@@ -56,17 +56,17 @@ namespace SocialPlus.UnitTests
         /// <summary>
         /// Facebook app name
         /// </summary>
-        public const string FBAppName = "SPTe­s­t­e­rApp";
+        public const string FBAppName = "XX"; // create a FB app and insert the appropriate values here and below
 
         /// <summary>
         /// Facebook client id
         /// </summary>
-        public const string FBClientID = "399457720179039";
+        public const string FBClientID = "XX";
 
         /// <summary>
         /// Facebook Secret Key
         /// </summary>
-        public const string FBSecretKey = "0e80309683b7bd861a3052d1497981c2";
+        public const string FBSecretKey = "XX";
 
         /// <summary>
         /// URL to verify Facebook authentication
@@ -76,9 +76,9 @@ namespace SocialPlus.UnitTests
         /// <summary>
         /// Facebook Access token. Have to get it manually
         /// Get Access Token from here: https://developers.facebook.com/tools/explorer/ -- have to be logged in as SPTester
-        /// <![CDATA[https://www.facebook.com/v2.5/dialog/oauth?client_id=552285811539105&response_type=token&redirect_uri=https%3A%2F%2Fwww.facebook.com/connect/login_success.html]]>
+        /// <![CDATA[https://www.facebook.com/v2.5/dialog/oauth?client_id=XX&response_type=token&redirect_uri=https%3A%2F%2Fwww.facebook.com/connect/login_success.html]]>
         /// </summary>
-        public const string FBAccessToken = "EAAH2TQZBcfKEBAFZCT5WJrjBD7iJT0Ol1TjEjJcRZC1DLtyvZAVbNM2WiQDBlZAfsrZBdPZBep9LrtkR7Ej7pdbGl0ZASYi9JS9mdiKLjx3ehTcoyyEdDgtOi3oxLYhaypwlU6qbvHQurdcum8q9EYRJfZATokzFuHbwZD";
+        public const string FBAccessToken = "XX";
 
         // ***************************
         // Use for Google Login
@@ -87,22 +87,22 @@ namespace SocialPlus.UnitTests
         /// <summary>
         /// Google app name
         /// </summary>
-        public const string GOOGAppName = "SPTesterProject";
+        public const string GOOGAppName = "XX"; // create a Google app and insert the appropriate values here and below
 
         /// <summary>
         /// Google client id
         /// </summary>
-        public const string GOOGClientID = "78611932291-k70ri2j87pmd2ae4obimiq1otd75348v.apps.googleusercontent.com";
+        public const string GOOGClientID = "XX";
 
         /// <summary>
         /// Google Secret Key
         /// </summary>
-        public const string GOOGSecretKey = "FoQmRqYWVNmk9NVYxhkeBJWY";
+        public const string GOOGSecretKey = "XX";
 
         /// <summary>
         /// Google Authorized User Code
         /// </summary>
-        public const string GOOGAuthorizedUserCode = "4/qfx0n8jicZYsyydc5TMaKZZZTZHKSPFtSOaQaZos0_s"; // *** Manually get this!!
+        public const string GOOGAuthorizedUserCode = "XX"; // *** Manually get this!!
 
         /// <summary>
         /// Google redirect URL where Access Token will be appended too
@@ -112,13 +112,13 @@ namespace SocialPlus.UnitTests
         /// <summary>
         /// Google project number - not sure if this is really used
         /// </summary>
-        public const string GOOGProjNumber = "78611932291";
+        public const string GOOGProjNumber = "XX";
 
         /// <summary>
         /// Google authentication URL
         /// -- Gets Authorization Code in the redirected URL of CNN.COM:
-        /// <![CDATA[https://accounts.google.com/o/oauth2/auth?redirect_uri=http%3A%2F%2Fwww.cnn.com&response_type=code&client_id=78611932291-k70ri2j87pmd2ae4obimiq1otd75348v.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadexchange.buyer&approval_prompt=force&access_type=offline]]>
-        /// -- Can get authorization code and Access Token https://developers.google.com/oauthplayground/?code=4/ddfP3U0fXhbnZ-AEfMypUOHfanW7nreIWWoEHAJYg1c#
+        /// <![CDATA[https://accounts.google.com/o/oauth2/auth?redirect_uri=http%3A%2F%2Fwww.cnn.com&response_type=code&client_id=XX.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadexchange.buyer&approval_prompt=force&access_type=offline]]>
+        /// -- Can get authorization code and Access Token https://developers.google.com/oauthplayground/?code=XX#
         /// </summary>
         public const string GOOGLoginAcctServiceURL = "https://accounts.google.com/o/oauth2/auth?";
 
@@ -129,32 +129,32 @@ namespace SocialPlus.UnitTests
         /// <summary>
         /// Twitter app name
         /// </summary>
-        public const string TwitAppName = "SPTesterApp";
+        public const string TwitAppName = "XX"; // create a Twitter app and insert the appropriate values here and below
 
         /// <summary>
         /// Twitter Client ID
         /// </summary>
-        public const string TwitClientID = "ekyojx32MC20Ogz9ITINP84Dr";
+        public const string TwitClientID = "XX";
 
         /// <summary>
         /// Twitter Secret Key
         /// </summary>
-        public const string TwitSecretKey = "6qGjMUpZzN8fZNMCLLza2QQ6X5Vw3H4UKY2rpQHXk2EbYmvR9q";
+        public const string TwitSecretKey = "XX";
 
         /// <summary>
         /// Twitter Oauth Verifier ... Manually set this from twitter dev site
         /// </summary>
-        public const string TwitOAuthVerifier = "gWuzMSZ8xU56UhVVBmyDF59GMSCLwqM8";
+        public const string TwitOAuthVerifier = "XX";
 
         /// <summary>
         /// Twitter OAuth Token .. (aka Requested Token) ... manually set this from twitter dev site
         /// </summary>
-        public const string TwitOAuthToken = "qo1BmwAAAAAAjBfmAAABUW-LQ5g";
+        public const string TwitOAuthToken = "XX";
 
         /// <summary>
         /// Twitter redirect URL where Requested Token is attached to
-        /// https://api.twitter.com/oauth/authenticate?oauth_token=mziQnwAAAAAAjBfmAAABUW-DCn4
-        /// Example of data in redirect URL: oauth_token=mziQnwAAAAAAjBfmAAABUW-DCn4 oauth_verifier=KLd1tKPcidjjUWP3zJ6ZrP0gZIkeaWSn
+        /// https://api.twitter.com/oauth/authenticate?oauth_token=XX
+        /// Example of data in redirect URL: oauth_token=XX oauth_verifier=XX
         /// OAuthVerifier is the User Code parameter
         /// OAuthToken is the Requested Token
         /// Steps to get Twitter tests working:
@@ -165,13 +165,6 @@ namespace SocialPlus.UnitTests
         /// 5) Run tests
         /// </summary>
         public const string TwitRedirectURL = "http://www.cnn.com";
-
-        // The tests use the Social Plus OAuth testing ... make sure login using browser so automatically login
-        // Logins:
-        // Microsoft Account – L:SPTester@Hotmail.com – P:SocialPlusPWD!
-        // FaceBook Account – L:SPTester@Hotmail.com – P:SocialPlusPWD! – DOB – 8/8/1980
-        // Google Account – L:sptester93@Gmail.com- P: SocialPlusPWD!
-        // Twitter Account – https://twitter.com/StevePTester – P: SocialPlusPWD! -- Used Hotmail acct as linked account
 
         /// <summary>
         /// ***************************************************
